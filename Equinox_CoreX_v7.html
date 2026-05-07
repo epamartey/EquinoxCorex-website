@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equinox CoreX Limited — Powering Africa's Energy Future</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A84C;--gold-lt:#E8C96A;--gold-dk:#8A6B2C;--gold-bg:rgba(201,168,76,0.08);
+  --black:#0C0C0C;--b2:#131313;--b3:#1A1A1A;--b4:#222;
+  --green:#1B3818;--green-2:#243F20;--green-3:#2E5228;
+  --white:#F4EFE4;--w2:#C6BEB0;--gray:#6A6760;
+  --gap:1px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;line-height:1.7;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--black);}
+::-webkit-scrollbar-thumb{background:var(--gold-dk);}
+img{display:block;object-fit:cover;}
+
+/* ── UTILITY ── */
+.wrap{max-width:1260px;margin:0 auto;padding:0 2.5rem;}
+.eyebrow{font-size:.68rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:.9rem;}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
+.gold-line{width:44px;height:3px;background:var(--gold);margin:1rem 0 1.6rem;}
+h2.hl{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.8vw,3.2rem);font-weight:700;line-height:1.1;color:var(--white);}
+h2.hl em{color:var(--gold);font-style:normal;}
+.lede{font-size:.95rem;font-weight:300;color:var(--w2);line-height:1.9;max-width:620px;}
+
+/* ── LOGO SVG ── */
+.logo-svg{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-mark{width:36px;height:36px;flex-shrink:0;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-top{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--white);letter-spacing:.04em;}
+.logo-bot{font-family:'Outfit',sans-serif;font-size:.55rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:2px;}
+
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:999;height:68px;display:flex;align-items:center;transition:background .3s,border .3s;}
+#nav.on{background:rgba(12,12,12,.97);border-bottom:1px solid rgba(201,168,76,.12);}
+.nav-in{max-width:1260px;width:100%;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.74rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,239,228,.55);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-btn{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:.48rem 1.3rem;text-decoration:none;transition:background .2s,color .2s;}
+.nav-btn:hover{background:var(--gold);color:var(--black);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.burger span{width:20px;height:1.5px;background:var(--white);display:block;}
+
+/* ── HERO ── */
+#hero{height:100vh;min-height:680px;position:relative;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--green) 0%,var(--black) 100%);}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,12,12,.94) 0%,rgba(12,12,12,.6) 52%,rgba(12,12,12,.2) 100%);}
+.hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,12,.95) 0%,transparent 52%);z-index:1;}
+.hero-content{position:relative;z-index:2;width:100%;padding-bottom:5rem;padding-top:68px;}
+.hero-in{max-width:1260px;margin:0 auto;padding:0 2.5rem;}
+.hero-kick{font-size:.68rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:flex;align-items:center;gap:10px;}
+.hero-kick::before{content:'';width:36px;height:1px;background:var(--gold);}
+h1.hero-h{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6.5vw,6rem);font-weight:700;line-height:.95;color:var(--white);margin-bottom:.2rem;}
+h1.hero-h .g{color:var(--gold);}
+h1.hero-h .it{font-style:italic;}
+.hero-sub{font-size:clamp(.85rem,1.4vw,1rem);font-weight:300;color:var(--w2);max-width:480px;margin:1.6rem 0 2.2rem;line-height:1.9;}
+
+/* ── ENTER THE CORE CTA ── */
+.enter-core{display:inline-flex;align-items:center;gap:.9rem;padding:.7rem 1.5rem;border:1px solid rgba(201,168,76,.3);background:rgba(201,168,76,.05);cursor:pointer;text-decoration:none;margin-bottom:3.5rem;transition:background .3s,border-color .3s;}
+.enter-core:hover{background:rgba(201,168,76,.12);border-color:var(--gold);}
+.ec-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);position:relative;flex-shrink:0;}
+.ec-dot::before,.ec-dot::after{content:'';position:absolute;border-radius:50%;border:1px solid var(--gold);animation:ripple 2.2s infinite;}
+.ec-dot::before{inset:-5px;animation-delay:0s;}
+.ec-dot::after{inset:-10px;opacity:.4;animation-delay:.4s;}
+@keyframes ripple{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.5);opacity:0;}}
+.ec-txt{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.24em;color:var(--gold);}
+.ec-arr{color:var(--gold);font-size:.9rem;transition:transform .3s;}
+.enter-core:hover .ec-arr{transform:translateX(5px);}
+
+.hero-stats{display:flex;border-top:1px solid rgba(201,168,76,.15);padding-top:1.8rem;gap:0;}
+.h-stat{padding-right:2.2rem;border-right:1px solid rgba(201,168,76,.12);}
+.h-stat:last-child{border-right:none;}
+.h-stat:not(:first-child){padding-left:2.2rem;}
+.h-stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--gold);line-height:1;letter-spacing:.04em;}
+.h-stat-l{font-size:.65rem;font-weight:400;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;}
+
+/* ── MARQUEE ── */
+#mq{background:var(--gold);padding:.78rem 0;overflow:hidden;white-space:nowrap;}
+.mq-tr{display:inline-flex;animation:mq 30s linear infinite;}
+.mq-tr span{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--black);padding:0 2.2rem;}
+.mq-tr .d{color:rgba(0,0,0,.3);}
+@keyframes mq{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ── ABOUT ── */
+#about{padding:8rem 0;background:var(--b2);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:2.5rem;}
+.about-p{font-weight:300;color:var(--w2);margin-bottom:1.2rem;line-height:1.9;}
+.btn-g{display:inline-block;font-size:.74rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;background:var(--gold);color:var(--black);padding:.82rem 2rem;text-decoration:none;transition:background .2s;margin-top:1.4rem;}
+.btn-g:hover{background:var(--gold-lt);}
+.about-imgs{position:relative;height:540px;}
+.a-main{position:absolute;right:0;top:0;width:78%;height:400px;overflow:hidden;background:linear-gradient(135deg,var(--green) 0%,var(--green-2) 100%);}
+.a-main img{width:100%;height:100%;object-fit:cover;}
+.a-acc{position:absolute;left:0;bottom:0;width:52%;height:210px;overflow:hidden;border:4px solid var(--b2);background:linear-gradient(135deg,var(--b4) 0%,var(--green) 100%);}
+.a-acc img{width:100%;height:100%;object-fit:cover;}
+.a-badge{position:absolute;right:0;bottom:55px;background:var(--gold);padding:1.4rem 1.6rem;z-index:2;}
+.a-badge-n{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--black);line-height:1;}
+.a-badge-l{font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.65);}
+
+/* ── VISION/MISSION ── */
+#vm{background:var(--black);}
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;min-height:420px;}
+.vm-panel{padding:5.5rem 3.5rem;position:relative;overflow:hidden;}
+.vm-bg{position:absolute;inset:0;background:var(--green);}
+.vm-bg img{width:100%;height:100%;object-fit:cover;}
+.vm-ov{position:absolute;inset:0;}
+.vm-L .vm-ov{background:rgba(27,56,24,.88);}
+.vm-R .vm-ov{background:rgba(12,12,12,.88);}
+.vm-cnt{position:relative;z-index:2;}
+.vm-ico{width:44px;height:44px;border:1px solid rgba(201,168,76,.35);display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;}
+.vm-ico svg{width:20px;height:20px;fill:none;stroke:var(--gold);stroke-width:1.5;}
+.vm-panel h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--white);margin-bottom:.9rem;line-height:1.2;}
+.vm-panel p{font-weight:300;color:var(--w2);line-height:1.85;font-size:.92rem;}
+
+/* ── VALUES ── */
+#values{padding:8rem 0;background:var(--green);}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:2.5rem;}
+.val-card{background:rgba(0,0,0,.18);padding:2.5rem 1.8rem;border-bottom:2px solid transparent;transition:border-color .3s,background .3s;}
+.val-card:hover{background:rgba(0,0,0,.32);border-bottom-color:var(--gold);}
+.val-n{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:rgba(201,168,76,.15);line-height:1;margin-bottom:.5rem;}
+.val-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold-lt);margin-bottom:.5rem;}
+.val-card p{font-size:.85rem;font-weight:300;color:rgba(244,239,228,.68);line-height:1.7;}
+
+/* ── PRODUCTS ── */
+#products{padding:8rem 0;background:var(--b3);}
+.prod-hero{width:100%;height:300px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--b4) 0%,var(--green) 100%);margin-bottom:2.5rem;}
+.prod-hero img{width:100%;height:100%;object-fit:cover;}
+.prod-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--b3) 0%,transparent 35%,transparent 65%,var(--b3) 100%);}
+.prod-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 38%,var(--b3) 100%);z-index:1;}
+.prod-tabs{display:flex;border-bottom:1px solid rgba(201,168,76,.12);margin-bottom:2.2rem;overflow-x:auto;}
+.p-tab{font-size:.71rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);padding:.9rem 1.5rem;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s;}
+.p-tab.on{color:var(--gold);border-bottom-color:var(--gold);}
+.prod-panel{display:none;}
+.prod-panel.on{display:block;}
+.panel-lede{font-weight:300;color:var(--w2);max-width:700px;margin-bottom:1.8rem;font-size:.9rem;line-height:1.8;}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:var(--gap);}
+.p-card{background:var(--b4);overflow:hidden;transition:transform .3s;}
+.p-card:hover{transform:translateY(-4px);}
+.p-card-img{height:190px;overflow:hidden;background:#1a1a1a;display:flex;align-items:center;justify-content:center;}
+.p-card-img img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .5s;}
+.p-card:hover .p-card-img img{transform:scale(1.05);}
+/* for landscape/scene images use cover */
+.p-card-img.cover img{object-fit:cover;padding:0;}
+.p-card-body{padding:1.4rem;}
+.p-card h4{font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:700;color:var(--white);margin-bottom:.45rem;}
+.p-card p{font-size:.79rem;font-weight:300;color:var(--w2);line-height:1.65;}
+
+/* ── SERVICES ── */
+#services{padding:8rem 0;background:var(--b2);}
+.svc-layout{display:grid;grid-template-columns:1fr 1.55fr;gap:5.5rem;align-items:start;margin-top:2.5rem;}
+.svc-sticky{position:sticky;top:5.5rem;}
+.svc-img{width:100%;height:360px;overflow:hidden;background:linear-gradient(135deg,var(--green) 0%,var(--b4) 100%);}
+.svc-img img{width:100%;height:100%;object-fit:cover;}
+.svc-tag{background:var(--gold);padding:1.1rem 1.4rem;}
+.svc-tag strong{display:block;font-size:.95rem;color:var(--black);margin-bottom:.15rem;}
+.svc-tag p{font-size:.78rem;color:rgba(0,0,0,.7);line-height:1.5;}
+.svc-img2{width:100%;height:180px;overflow:hidden;margin-top:var(--gap);background:linear-gradient(135deg,var(--b4) 0%,var(--green-2) 100%);}
+.svc-img2 img{width:100%;height:100%;object-fit:cover;}
+.acc{border-top:1px solid rgba(201,168,76,.1);}
+.acc-item{border-bottom:1px solid rgba(201,168,76,.1);}
+.acc-h{display:flex;align-items:center;gap:.9rem;padding:1.2rem 0;cursor:pointer;}
+.acc-h:hover .acc-t{color:var(--gold);}
+.acc-n{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--gold);min-width:30px;opacity:.55;}
+.acc-t{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--white);flex:1;transition:color .2s;}
+.acc-ico{width:26px;height:26px;border:1px solid rgba(201,168,76,.22);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.95rem;flex-shrink:0;transition:transform .3s,background .2s;}
+.acc-item.open .acc-ico{transform:rotate(45deg);background:var(--gold);color:var(--black);}
+.acc-body{display:none;padding:0 0 1.4rem 2.6rem;}
+.acc-item.open .acc-body{display:block;}
+.acc-body p{font-weight:300;color:var(--w2);margin-bottom:.9rem;font-size:.87rem;}
+.acc-body ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.3rem .7rem;}
+.acc-body li{font-size:.79rem;font-weight:300;color:var(--w2);padding-left:.9rem;position:relative;}
+.acc-body li::before{content:'';position:absolute;left:0;top:.55em;width:4px;height:4px;background:var(--gold);border-radius:50%;}
+
+/* ── SECTORS ── */
+#sectors{padding:8rem 0;background:var(--black);}
+.sec-row{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin:2.5rem 0;}
+.sec-card{height:270px;position:relative;overflow:hidden;background:#1a2a1a;}
+.sec-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.sec-card:hover img{transform:scale(1.06);}
+.sec-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,12,.88) 0%,rgba(12,12,12,.15) 60%,transparent 100%);}
+.sec-lbl{position:absolute;bottom:0;left:0;right:0;padding:1.4rem;}
+.sec-lbl h4{font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:700;color:var(--white);}
+.sec-lbl p{font-size:.72rem;color:var(--gold-lt);font-weight:300;margin-top:2px;}
+.sec-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);}
+.sec-pill{background:var(--b3);padding:1rem 1.4rem;display:flex;align-items:center;gap:.7rem;font-size:.79rem;font-weight:400;color:var(--w2);transition:background .2s,color .2s;}
+.sec-pill:hover{background:var(--b4);color:var(--gold);}
+.sec-pill::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;}
+
+/* ── CONTACT ── */
+#contact{background:var(--black);}
+.con-split{display:grid;grid-template-columns:1fr 1fr;min-height:780px;}
+.con-L{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--green) 0%,var(--b4) 100%);}
+.con-L img{width:100%;height:100%;object-fit:cover;}
+.con-ov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(27,56,24,.9) 0%,rgba(12,12,12,.72) 100%);}
+.con-info{position:absolute;inset:0;padding:4rem;display:flex;flex-direction:column;justify-content:flex-end;}
+.con-info h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--white);margin-bottom:.8rem;line-height:1.2;}
+.con-info p{font-weight:300;color:rgba(244,239,228,.72);margin-bottom:1.8rem;font-size:.88rem;line-height:1.85;max-width:360px;}
+.c-det{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1rem;}
+.c-ico{width:34px;height:34px;border:1px solid rgba(201,168,76,.28);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.c-ico svg{width:14px;height:14px;fill:none;stroke:var(--gold);stroke-width:1.5;}
+.c-txt{font-size:.8rem;color:rgba(244,239,228,.78);}
+.c-txt strong{display:block;font-size:.63rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1px;}
+.con-R{background:var(--b2);padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center;}
+.con-R .eyebrow{margin-bottom:.3rem;}
+.conv-head{margin-bottom:1.8rem;}
+.conv-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:700;color:var(--white);line-height:1.2;margin-bottom:.35rem;}
+.conv-sub{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.22em;color:var(--gold);opacity:.75;}
+.frm{display:flex;flex-direction:column;gap:.7rem;}
+.frm-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;}
+.frm input,.frm textarea,.frm select{font-family:'Outfit',sans-serif;font-size:.84rem;font-weight:300;background:rgba(255,255,255,.025);border:1px solid rgba(201,168,76,.13);color:var(--white);padding:.85rem .95rem;outline:none;width:100%;transition:border-color .2s;-webkit-appearance:none;}
+.frm input:focus,.frm textarea:focus,.frm select:focus{border-color:var(--gold);}
+.frm input::placeholder,.frm textarea::placeholder{color:rgba(244,239,228,.22);}
+.frm select option{background:var(--b2);color:var(--white);}
+.frm textarea{resize:vertical;min-height:95px;}
+.svc-lbl-txt{font-size:.65rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-top:.3rem;margin-bottom:.5rem;}
+.svc-cks{display:grid;grid-template-columns:1fr 1fr;gap:.35rem .7rem;margin-bottom:.3rem;}
+.svc-ck{display:flex;align-items:center;gap:.5rem;cursor:pointer;}
+.svc-ck input[type=checkbox]{appearance:none;-webkit-appearance:none;width:13px;height:13px;border:1px solid rgba(201,168,76,.32);background:transparent;cursor:pointer;flex-shrink:0;position:relative;transition:background .2s,border-color .2s;}
+.svc-ck input:checked{background:var(--gold);border-color:var(--gold);}
+.svc-ck input:checked::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:8px;color:var(--black);font-weight:700;line-height:1;}
+.svc-ck span{font-size:.74rem;font-weight:300;color:var(--w2);}
+.frm-btn{font-family:'Outfit',sans-serif;font-size:.74rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:.95rem 2rem;cursor:pointer;transition:background .2s;align-self:flex-start;margin-top:.4rem;}
+.frm-btn:hover{background:var(--gold-lt);}
+
+/* ── FOOTER ── */
+footer{background:var(--b2);border-top:1px solid rgba(201,168,76,.08);padding:3.5rem 0 2rem;}
+.ft-in{max-width:1260px;margin:0 auto;padding:0 2.5rem;}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(201,168,76,.08);}
+.ft-brand p{font-size:.78rem;font-weight:300;color:var(--gray);line-height:1.8;max-width:260px;margin-top:.9rem;}
+.ft-col h5{font-size:.64rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.ft-col a{font-size:.78rem;font-weight:300;color:var(--gray);text-decoration:none;transition:color .2s;}
+.ft-col a:hover{color:var(--gold);}
+.ft-bot{display:flex;align-items:center;justify-content:space-between;padding-top:1.8rem;flex-wrap:wrap;gap:.8rem;}
+.ft-copy{font-size:.72rem;color:var(--gray);}
+.ft-legal{display:flex;gap:1.4rem;}
+.ft-legal a{font-size:.72rem;color:var(--gray);text-decoration:none;transition:color .2s;}
+.ft-legal a:hover{color:var(--gold);}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}
+.rv.in{opacity:1;transform:none;}
+.rvl{opacity:0;transform:translateX(-36px);transition:opacity .75s ease,transform .75s ease;}
+.rvl.in{opacity:1;transform:none;}
+.rvr{opacity:0;transform:translateX(36px);transition:opacity .75s ease,transform .75s ease;}
+.rvr.in{opacity:1;transform:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .about-grid,.vm-grid,.con-split{grid-template-columns:1fr;}
+  .svc-layout{grid-template-columns:1fr;}
+  .svc-sticky{position:static;}
+  .ft-top{grid-template-columns:1fr 1fr;}
+  .con-L{min-height:400px;}
+}
+@media(max-width:768px){
+  .wrap{padding:0 1.5rem;}
+  .nav-links,.nav-btn{display:none;}
+  .burger{display:flex;}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--black);padding:1.8rem 1.5rem;gap:1rem;border-bottom:1px solid rgba(201,168,76,.12);}
+  .hero-stats{flex-wrap:wrap;gap:1.2rem;}
+  .h-stat{border-right:none;}
+  .val-grid,.sec-row,.sec-pills{grid-template-columns:1fr 1fr;}
+  .frm-row,.svc-cks{grid-template-columns:1fr;}
+  .ft-top{grid-template-columns:1fr;}
+  .about-imgs{height:360px;}
+  .vm-panel{padding:4rem 2rem;}
+  .con-R{padding:3rem 1.8rem;}
+  .acc-body ul{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .val-grid,.sec-row,.sec-pills,.prod-grid{grid-template-columns:1fr;}
+}
+.panel-intro{font-weight:300;color:var(--w2);max-width:720px;margin-bottom:1.8rem;font-size:.9rem;line-height:1.8;}
+/* White background for product catalogue photos, dark for scene/landscape shots */
+.p-card-img.product-bg{background:#ffffff;}
+.p-card-img.scene-bg,.p-card-img.cover{background:#1a1a1a;}
+.p-card-img.cover img{object-fit:cover;padding:0;}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav id="nav">
+  <div class="nav-in">
+    <!-- LOGO -->
+    <a href="#hero" class="logo-svg">
+      <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="18" cy="18" r="17" stroke="#C9A84C" stroke-width="1.2"/>
+        <!-- Inner geometric: equinox cross / solar symbol -->
+        <circle cx="18" cy="18" r="8" stroke="#C9A84C" stroke-width="1"/>
+        <!-- Diagonal spokes — equinox angles -->
+        <line x1="18" y1="1" x2="18" y2="9" stroke="#C9A84C" stroke-width="1.2"/>
+        <line x1="18" y1="27" x2="18" y2="35" stroke="#C9A84C" stroke-width="1.2"/>
+        <line x1="1" y1="18" x2="9" y2="18" stroke="#C9A84C" stroke-width="1.2"/>
+        <line x1="27" y1="18" x2="35" y2="18" stroke="#C9A84C" stroke-width="1.2"/>
+        <!-- Diagonal spokes -->
+        <line x1="5.5" y1="5.5" x2="11.5" y2="11.5" stroke="#C9A84C" stroke-width=".8"/>
+        <line x1="24.5" y1="24.5" x2="30.5" y2="30.5" stroke="#C9A84C" stroke-width=".8"/>
+        <line x1="30.5" y1="5.5" x2="24.5" y2="11.5" stroke="#C9A84C" stroke-width=".8"/>
+        <line x1="5.5" y1="30.5" x2="11.5" y2="24.5" stroke="#C9A84C" stroke-width=".8"/>
+        <!-- Core dot -->
+        <circle cx="18" cy="18" r="2.5" fill="#C9A84C"/>
+        <!-- Pine green arc top-left -->
+        <path d="M8 10 A12 12 0 0 1 18 6" stroke="#2E5228" stroke-width="2" stroke-linecap="round"/>
+        <!-- Gold arc bottom-right -->
+        <path d="M28 26 A12 12 0 0 1 18 30" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-top">Equinox CoreX</span>
+        <span class="logo-bot">Energy &amp; Technology</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="nl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Enquire Now</a>
+    <div class="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1800&q=85&fit=crop" alt="Power infrastructure" onerror="this.style.display='none'">
+  </div>
+  <div class="hero-content">
+    <div class="hero-in">
+      <div class="hero-kick">Accra, Ghana &mdash; Serving Africa</div>
+      <h1 class="hero-h">Powering<br><span class="g it">Africa's</span><br>Energy Future</h1>
+      <p class="hero-sub">Engineering, energy &amp; technology solutions at the convergence of power systems, automation, digital intelligence and industrial operations.</p>
+
+      <!-- ENTER THE CORE — no Explore Products / Services buttons -->
+      <a href="#about" class="enter-core">
+        <div class="ec-dot"></div>
+        <span class="ec-txt">Enter the Core</span>
+        <span class="ec-arr">&#8594;</span>
+      </a>
+
+      <div class="hero-stats">
+        <div class="h-stat"><div class="h-stat-n">12+</div><div class="h-stat-l">Service Areas</div></div>
+        <div class="h-stat"><div class="h-stat-n">30+</div><div class="h-stat-l">Product Lines</div></div>
+        <div class="h-stat"><div class="h-stat-n">9</div><div class="h-stat-l">Sectors Served</div></div>
+        <div class="h-stat"><div class="h-stat-n">Pan&#8209;Africa</div><div class="h-stat-l">Market Reach</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MARQUEE ═══════════════ -->
+<div id="mq">
+  <div class="mq-tr">
+    <span>Smart Metering</span><span class="d">◆</span><span>Power Distribution</span><span class="d">◆</span><span>Renewable Energy</span><span class="d">◆</span><span>AMI Infrastructure</span><span class="d">◆</span><span>Grid Modernisation</span><span class="d">◆</span><span>Substation Engineering</span><span class="d">◆</span><span>BESS Solutions</span><span class="d">◆</span><span>Energy Technology</span><span class="d">◆</span><span>Mining Technologies</span><span class="d">◆</span><span>Digital Platforms</span><span class="d">◆</span>
+    <span>Smart Metering</span><span class="d">◆</span><span>Power Distribution</span><span class="d">◆</span><span>Renewable Energy</span><span class="d">◆</span><span>AMI Infrastructure</span><span class="d">◆</span><span>Grid Modernisation</span><span class="d">◆</span><span>Substation Engineering</span><span class="d">◆</span><span>BESS Solutions</span><span class="d">◆</span><span>Energy Technology</span><span class="d">◆</span><span>Mining Technologies</span><span class="d">◆</span><span>Digital Platforms</span><span class="d">◆</span>
+  </div>
+</div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="rvl">
+        <div class="eyebrow">Who We Are</div>
+        <h2 class="hl">Ghanaian-Owned.<br><em>Africa-Focused.</em><br>World-Class.</h2>
+        <div class="gold-line"></div>
+        <p class="about-p">Equinox CoreX Limited is a Ghanaian-owned engineering, energy, and technology solutions company delivering advanced electrical infrastructure, renewable energy systems, industrial technologies, and intelligent digital platforms.</p>
+        <p class="about-p">We operate at the convergence of power systems, automation, digital intelligence, and industrial operations — supporting organizations that require reliability, efficiency, and future-ready infrastructure across Ghana and Africa.</p>
+        <p class="about-p">Through world-class technologies, engineering expertise, and deep local market understanding, we deliver solutions that enhance operational resilience, reduce risk, and unlock measurable value.</p>
+        <a href="#contact" class="btn-g">Start a Conversation</a>
+      </div>
+      <div class="about-imgs rvr">
+        <div class="a-main"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=900&q=85&fit=crop" alt="Wind energy" onerror="this.style.display='none'"></div>
+        <div class="a-acc"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=85&fit=crop" alt="Solar" onerror="this.style.display='none'"></div>
+        <div class="a-badge"><div class="a-badge-n">Est.</div><div class="a-badge-n">2024</div><div class="a-badge-l">Accra, Ghana</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ VISION / MISSION ═══════════════ -->
+<section id="vm">
+  <div class="vm-grid">
+    <div class="vm-panel vm-L">
+      <div class="vm-bg"><img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=900&q=85&fit=crop" alt="Substation" onerror="this.style.display='none'"></div>
+      <div class="vm-ov"></div>
+      <div class="vm-cnt rv">
+        <div class="vm-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <div class="eyebrow">Our Vision</div>
+        <h3>Africa's Most Trusted Energy Partner</h3>
+        <p>To become Africa's most trusted provider of intelligent energy, industrial, and digital infrastructure solutions — enabling resilient systems, sustainable growth, and operational excellence.</p>
+      </div>
+    </div>
+    <div class="vm-panel vm-R">
+      <div class="vm-bg"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=85&fit=crop" alt="Technology" onerror="this.style.display='none'"></div>
+      <div class="vm-ov"></div>
+      <div class="vm-cnt rv">
+        <div class="vm-ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="eyebrow">Our Mission</div>
+        <h3>Design. Supply. Integrate. Support.</h3>
+        <p>To design, supply, integrate, and support high-performance electrical, renewable, industrial, and digital solutions that improve reliability, efficiency, safety, and sustainability across critical sectors in Africa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ VALUES ═══════════════ -->
+<section id="values">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--gold-lt)">What We Stand For</div>
+    <h2 class="hl rv">Core <em>Values</em></h2>
+    <div class="gold-line rv"></div>
+    <div class="val-grid rv">
+      <div class="val-card"><div class="val-n">01</div><h4>Excellence</h4><p>Highest standards in engineering quality, system reliability, and service delivery.</p></div>
+      <div class="val-card"><div class="val-n">02</div><h4>Integrity</h4><p>Transparency, accountability, and ethical business practices in everything we do.</p></div>
+      <div class="val-card"><div class="val-n">03</div><h4>Safety First</h4><p>The safety of people, infrastructure, and the environment is non-negotiable.</p></div>
+      <div class="val-card"><div class="val-n">04</div><h4>Innovation</h4><p>Advanced technologies and continuous improvement to solve complex challenges.</p></div>
+      <div class="val-card"><div class="val-n">05</div><h4>Sustainability</h4><p>Energy efficiency, renewable adoption, and responsible resource use.</p></div>
+      <div class="val-card"><div class="val-n">06</div><h4>Partnership</h4><p>Enduring relationships built on trust, performance, and shared success.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRODUCTS ═══════════════ -->
+<section id="products">
+  <div class="wrap">
+    <div class="eyebrow rv">What We Supply</div>
+    <h2 class="hl rv">Our <em>Products</em></h2>
+    <div class="gold-bar rv"></div>
+    <p class="lede rv">A comprehensive range of high-quality energy, electrical, and industrial products — engineered for reliability, safety, and performance across Ghana and Africa.</p>
+
+    <div class="prod-tabs">
+      <button class="p-tab on" onclick="showTab('ami',this)">Smart Metering &amp; AMI</button>
+      <button class="p-tab" onclick="showTab('elec',this)">Electrical &amp; Power</button>
+      <button class="p-tab" onclick="showTab('stor',this)">Energy Storage &amp; Conversion</button>
+      <button class="p-tab" onclick="showTab('prot',this)">Protection &amp; Automation</button>
+    </div>
+
+    <!-- ════ SMART METERING & AMI ════ -->
+    <div class="prod-panel on" id="pp-ami">
+      <p class="panel-intro">Our smart metering product line offers utilities a complete hardware and software ecosystem for AMI deployment — from individual meters to network-wide data management systems.</p>
+      <div class="prod-grid">
+
+        <!-- Smart Electricity Meter -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#f8f8f8;">
+            <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="160" height="176">
+              <!-- Meter body -->
+              <rect x="45" y="18" width="110" height="184" rx="8" fill="#e8e8e8" stroke="#aaa" stroke-width="1.5"/>
+              <rect x="52" y="26" width="96" height="176" rx="6" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+              <!-- Display screen -->
+              <rect x="60" y="38" width="80" height="48" rx="4" fill="#1a2a3a" stroke="#555" stroke-width="1"/>
+              <text x="100" y="56" text-anchor="middle" fill="#00ff88" font-size="10" font-family="monospace">00123.4</text>
+              <text x="100" y="70" text-anchor="middle" fill="#88ccff" font-size="8" font-family="monospace">kWh</text>
+              <rect x="62" y="80" width="8" height="3" rx="1" fill="#00ff88"/>
+              <rect x="74" y="80" width="8" height="3" rx="1" fill="#ffaa00"/>
+              <!-- IR port -->
+              <circle cx="100" cy="100" r="5" fill="#333" stroke="#666" stroke-width="1"/>
+              <!-- Terminals row -->
+              <rect x="62" y="115" width="12" height="18" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <rect x="78" y="115" width="12" height="18" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <rect x="94" y="115" width="12" height="18" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <rect x="110" y="115" width="12" height="18" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <rect x="126" y="115" width="12" height="18" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <!-- LED indicators -->
+              <circle cx="68" cy="145" r="3" fill="#ff4444"/>
+              <circle cx="82" cy="145" r="3" fill="#44ff44"/>
+              <circle cx="96" cy="145" r="3" fill="#4444ff"/>
+              <!-- Barcode -->
+              <rect x="62" y="160" width="76" height="18" rx="2" fill="white" stroke="#ccc" stroke-width="0.5"/>
+              <line x1="66" y1="163" x2="66" y2="174" stroke="#333" stroke-width="1.5"/>
+              <line x1="70" y1="163" x2="70" y2="174" stroke="#333" stroke-width="0.8"/>
+              <line x1="73" y1="163" x2="73" y2="174" stroke="#333" stroke-width="2"/>
+              <line x1="77" y1="163" x2="77" y2="174" stroke="#333" stroke-width="0.8"/>
+              <line x1="80" y1="163" x2="80" y2="174" stroke="#333" stroke-width="1.5"/>
+              <!-- Label -->
+              <rect x="52" y="190" width="96" height="14" rx="3" fill="#C9A84C" fill-opacity="0.25"/>
+              <text x="100" y="201" text-anchor="middle" fill="#8A6B2C" font-size="8" font-family="sans-serif" font-weight="600">SMART ELECTRICITY METER</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Smart Electricity Meters</h4><p>High-accuracy single &amp; three-phase smart meters. DLMS/COSEM and IEC 62056 compliant. Remote reading, tamper detection and load control.</p></div>
+        </div>
+
+        <!-- Prepaid Meter -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#f8f8f8;">
+            <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="160" height="176">
+              <rect x="42" y="15" width="116" height="190" rx="8" fill="#dde8dd" stroke="#8aaa8a" stroke-width="1.5"/>
+              <rect x="50" y="24" width="100" height="181" rx="6" fill="#eef4ee" stroke="#aabcaa" stroke-width="1"/>
+              <!-- Display -->
+              <rect x="58" y="34" width="84" height="44" rx="4" fill="#1a2a1a" stroke="#4a6a4a" stroke-width="1"/>
+              <text x="100" y="50" text-anchor="middle" fill="#44ff44" font-size="10" font-family="monospace">PREPAID</text>
+              <text x="100" y="65" text-anchor="middle" fill="#88ff88" font-size="9" font-family="monospace">00450.2 kWh</text>
+              <!-- Keypad grid 4x4 -->
+              <rect x="58" y="88" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="68" y="99" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">1</text>
+              <rect x="82" y="88" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="92" y="99" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">2</text>
+              <rect x="106" y="88" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="116" y="99" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">3</text>
+              <rect x="130" y="88" width="20" height="14" rx="3" fill="#C9A84C" stroke="#8A6B2C" stroke-width="1"/>
+              <text x="140" y="99" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">▶</text>
+              <rect x="58" y="106" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="68" y="117" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">4</text>
+              <rect x="82" y="106" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="92" y="117" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">5</text>
+              <rect x="106" y="106" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="116" y="117" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">6</text>
+              <rect x="130" y="106" width="20" height="14" rx="3" fill="#cc4444" stroke="#882222" stroke-width="1"/>
+              <text x="140" y="117" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">✕</text>
+              <rect x="58" y="124" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="68" y="135" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">7</text>
+              <rect x="82" y="124" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="92" y="135" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">8</text>
+              <rect x="106" y="124" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="116" y="135" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">9</text>
+              <rect x="130" y="124" width="20" height="14" rx="3" fill="#4a8a4a" stroke="#2a6a2a" stroke-width="1"/>
+              <text x="140" y="135" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">OK</text>
+              <rect x="70" y="142" width="20" height="14" rx="3" fill="#8aaa8a" stroke="#5a8a5a" stroke-width="1"/>
+              <text x="80" y="153" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif">0</text>
+              <!-- STS Token label -->
+              <rect x="58" y="165" width="84" height="16" rx="3" fill="white" stroke="#aaa" stroke-width="0.5"/>
+              <text x="100" y="177" text-anchor="middle" fill="#333" font-size="8" font-family="monospace">STS TOKEN ENTRY</text>
+              <!-- Bottom label -->
+              <rect x="50" y="192" width="100" height="13" rx="3" fill="#C9A84C" fill-opacity="0.3"/>
+              <text x="100" y="202" text-anchor="middle" fill="#6B4A1C" font-size="7.5" font-family="sans-serif" font-weight="600">PREPAID ELECTRICITY METER</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Prepaid Electricity Meters</h4><p>STS-compliant prepaid meters for token-based electricity payment. Single and three-phase with keypad and smart card interfaces.</p></div>
+        </div>
+
+        <!-- DCU -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#f0f4f8;">
+            <svg viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg" width="176" height="144">
+              <!-- Main unit enclosure -->
+              <rect x="20" y="25" width="180" height="130" rx="6" fill="#d8e0e8" stroke="#8899aa" stroke-width="1.5"/>
+              <rect x="28" y="33" width="164" height="114" rx="4" fill="#e8f0f8" stroke="#aabbcc" stroke-width="0.8"/>
+              <!-- Status LEDs top -->
+              <circle cx="38" cy="42" r="4" fill="#44ff44"/>
+              <circle cx="50" cy="42" r="4" fill="#ffaa00"/>
+              <circle cx="62" cy="42" r="4" fill="#ff4444"/>
+              <text x="85" y="46" fill="#556677" font-size="8" font-family="sans-serif">DCU-3000</text>
+              <!-- Left panel: antenna icon -->
+              <rect x="30" y="55" width="50" height="82" rx="3" fill="#c8d8e8" stroke="#99aacc" stroke-width="1"/>
+              <line x1="55" y1="70" x2="55" y2="58" stroke="#556699" stroke-width="2"/>
+              <line x1="46" y1="65" x2="55" y2="58" stroke="#556699" stroke-width="1.5"/>
+              <line x1="64" y1="65" x2="55" y2="58" stroke="#556699" stroke-width="1.5"/>
+              <line x1="40" y1="70" x2="55" y2="58" stroke="#99aacc" stroke-width="1"/>
+              <line x1="70" y1="70" x2="55" y2="58" stroke="#99aacc" stroke-width="1"/>
+              <text x="55" y="100" text-anchor="middle" fill="#445566" font-size="7" font-family="sans-serif">RF/PLC</text>
+              <text x="55" y="112" text-anchor="middle" fill="#445566" font-size="7" font-family="sans-serif">4G/NB-IoT</text>
+              <text x="55" y="124" text-anchor="middle" fill="#445566" font-size="7" font-family="sans-serif">MODULE</text>
+              <!-- Centre: connection diagram -->
+              <rect x="90" y="55" width="60" height="82" rx="3" fill="#c8d8e8" stroke="#99aacc" stroke-width="1"/>
+              <rect x="96" y="65" width="48" height="28" rx="2" fill="#1a2a3a" stroke="#4466aa" stroke-width="1"/>
+              <text x="120" y="76" text-anchor="middle" fill="#44aaff" font-size="7" font-family="monospace">METER DATA</text>
+              <text x="120" y="87" text-anchor="middle" fill="#88ffaa" font-size="7" font-family="monospace">COLLECTION</text>
+              <line x1="108" y1="93" x2="108" y2="105" stroke="#C9A84C" stroke-width="1"/>
+              <line x1="120" y1="93" x2="120" y2="105" stroke="#C9A84C" stroke-width="1"/>
+              <line x1="132" y1="93" x2="132" y2="105" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="108" cy="108" r="3" fill="#C9A84C"/>
+              <circle cx="120" cy="108" r="3" fill="#C9A84C"/>
+              <circle cx="132" cy="108" r="3" fill="#C9A84C"/>
+              <!-- Right panel: ports -->
+              <rect x="160" y="55" width="52" height="82" rx="3" fill="#c8d8e8" stroke="#99aacc" stroke-width="1"/>
+              <rect x="164" y="62" width="42" height="10" rx="2" fill="#8899aa" stroke="#667788" stroke-width="0.8"/>
+              <text x="185" y="70" text-anchor="middle" fill="white" font-size="6" font-family="sans-serif">ETH PORT</text>
+              <rect x="164" y="76" width="42" height="10" rx="2" fill="#8899aa" stroke="#667788" stroke-width="0.8"/>
+              <text x="185" y="84" text-anchor="middle" fill="white" font-size="6" font-family="sans-serif">RS-485 ×4</text>
+              <rect x="164" y="90" width="42" height="10" rx="2" fill="#8899aa" stroke="#667788" stroke-width="0.8"/>
+              <text x="185" y="98" text-anchor="middle" fill="white" font-size="6" font-family="sans-serif">USB</text>
+              <rect x="164" y="104" width="42" height="10" rx="2" fill="#C9A84C" fill-opacity="0.4" stroke="#C9A84C" stroke-width="0.8"/>
+              <text x="185" y="112" text-anchor="middle" fill="#6B4A1C" font-size="6" font-family="sans-serif">SIM SLOT</text>
+              <!-- Bottom label -->
+              <rect x="28" y="150" width="164" height="10" rx="2" fill="#C9A84C" fill-opacity="0.25"/>
+              <text x="110" y="158" text-anchor="middle" fill="#6B4A1C" font-size="7.5" font-family="sans-serif" font-weight="600">DATA CONCENTRATOR UNIT (DCU)</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Data Concentrator Units (DCU)</h4><p>Network aggregation devices collecting, processing, and transmitting meter data. Supports PLC, RF, GPRS, and NB-IoT communication technologies.</p></div>
+        </div>
+
+        <!-- Communication Module -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#1a1a2a;">
+            <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" width="160" height="144">
+              <!-- PCB board -->
+              <rect x="25" y="20" width="150" height="140" rx="4" fill="#1a3a2a" stroke="#2a5a3a" stroke-width="1.5"/>
+              <!-- PCB traces -->
+              <line x1="50" y1="40" x2="50" y2="140" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <line x1="80" y1="40" x2="80" y2="140" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <line x1="120" y1="40" x2="120" y2="140" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <line x1="150" y1="40" x2="150" y2="140" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <line x1="25" y1="65" x2="175" y2="65" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <line x1="25" y1="100" x2="175" y2="100" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <line x1="25" y1="130" x2="175" y2="130" stroke="#2a6a4a" stroke-width="1" stroke-opacity="0.5"/>
+              <!-- Main chip -->
+              <rect x="70" y="50" width="60" height="45" rx="3" fill="#111" stroke="#C9A84C" stroke-width="1.5"/>
+              <text x="100" y="68" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="monospace">HPLC+4G</text>
+              <text x="100" y="80" text-anchor="middle" fill="#88aacc" font-size="7" font-family="monospace">DUAL MODE</text>
+              <text x="100" y="90" text-anchor="middle" fill="#88aacc" font-size="6" font-family="monospace">MODULE</text>
+              <!-- Pin rows left -->
+              <rect x="25" y="55" width="8" height="50" rx="1" fill="#888" stroke="#555" stroke-width="0.5"/>
+              <line x1="29" y1="60" x2="40" y2="60" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="29" y1="68" x2="40" y2="68" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="29" y1="76" x2="40" y2="76" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="29" y1="84" x2="40" y2="84" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="29" y1="92" x2="40" y2="92" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="29" y1="100" x2="40" y2="100" stroke="#C9A84C" stroke-width="0.8"/>
+              <!-- Pin rows right -->
+              <rect x="167" y="55" width="8" height="50" rx="1" fill="#888" stroke="#555" stroke-width="0.5"/>
+              <line x1="171" y1="60" x2="160" y2="60" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="171" y1="68" x2="160" y2="68" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="171" y1="76" x2="160" y2="76" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="171" y1="84" x2="160" y2="84" stroke="#C9A84C" stroke-width="0.8"/>
+              <line x1="171" y1="92" x2="160" y2="92" stroke="#C9A84C" stroke-width="0.8"/>
+              <!-- Capacitors -->
+              <rect x="38" y="108" width="10" height="16" rx="1" fill="#3366cc" stroke="#2244aa" stroke-width="0.8"/>
+              <rect x="55" y="108" width="10" height="16" rx="1" fill="#3366cc" stroke="#2244aa" stroke-width="0.8"/>
+              <rect x="38" y="130" width="10" height="16" rx="1" fill="#cc6633" stroke="#aa4422" stroke-width="0.8"/>
+              <!-- Antenna connector -->
+              <rect x="140" y="108" width="22" height="12" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <text x="151" y="118" text-anchor="middle" fill="white" font-size="6" font-family="sans-serif">ANT</text>
+              <!-- SIM slot -->
+              <rect x="110" y="128" width="30" height="18" rx="2" fill="#555" stroke="#333" stroke-width="1"/>
+              <text x="125" y="140" text-anchor="middle" fill="#aaa" font-size="6" font-family="sans-serif">SIM</text>
+              <!-- LEDs -->
+              <circle cx="38" cy="35" r="4" fill="#44ff44" fill-opacity="0.9"/>
+              <circle cx="50" cy="35" r="4" fill="#ffaa00" fill-opacity="0.9"/>
+              <!-- Label -->
+              <rect x="62" y="148" width="76" height="9" rx="2" fill="#C9A84C" fill-opacity="0.3"/>
+              <text x="100" y="155.5" text-anchor="middle" fill="#E8C96A" font-size="6.5" font-family="sans-serif" font-weight="600">COMMUNICATION MODULE</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Communication Modules</h4><p>Plug-in modules supporting PLC, RF mesh, GPRS/3G/4G, and NB-IoT for flexible AMI network architectures suited to local infrastructure conditions.</p></div>
+        </div>
+
+        <!-- Energy Storage Battery -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#f0f4f8;">
+            <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" width="128" height="176">
+              <!-- Cabinet body -->
+              <rect x="20" y="15" width="120" height="195" rx="8" fill="#d0d8e8" stroke="#8899bb" stroke-width="2"/>
+              <rect x="28" y="23" width="104" height="179" rx="6" fill="#e0e8f0" stroke="#aabbcc" stroke-width="1"/>
+              <!-- Brand panel top -->
+              <rect x="28" y="23" width="104" height="28" rx="6" fill="#1a2a3a" stroke="#2a3a4a" stroke-width="1"/>
+              <text x="80" y="34" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">LI-ION BATTERY</text>
+              <text x="80" y="44" text-anchor="middle" fill="#88aacc" font-size="7" font-family="sans-serif">51.2V · 314AH</text>
+              <!-- Cell modules stacked -->
+              <rect x="34" y="57" width="92" height="20" rx="3" fill="#2a3a4a" stroke="#3a4a5a" stroke-width="1"/>
+              <rect x="36" y="59" width="88" height="16" rx="2" fill="#3a5a7a" stroke="#4a6a8a" stroke-width="0.5"/>
+              <text x="80" y="71" text-anchor="middle" fill="#88ccff" font-size="7" font-family="monospace">CELL MODULE 1</text>
+              <rect x="34" y="80" width="92" height="20" rx="3" fill="#2a3a4a" stroke="#3a4a5a" stroke-width="1"/>
+              <rect x="36" y="82" width="88" height="16" rx="2" fill="#3a5a7a" stroke="#4a6a8a" stroke-width="0.5"/>
+              <text x="80" y="94" text-anchor="middle" fill="#88ccff" font-size="7" font-family="monospace">CELL MODULE 2</text>
+              <rect x="34" y="103" width="92" height="20" rx="3" fill="#2a3a4a" stroke="#3a4a5a" stroke-width="1"/>
+              <rect x="36" y="105" width="88" height="16" rx="2" fill="#3a5a7a" stroke="#4a6a8a" stroke-width="0.5"/>
+              <text x="80" y="117" text-anchor="middle" fill="#88ccff" font-size="7" font-family="monospace">CELL MODULE 3</text>
+              <rect x="34" y="126" width="92" height="20" rx="3" fill="#2a3a4a" stroke="#3a4a5a" stroke-width="1"/>
+              <rect x="36" y="128" width="88" height="16" rx="2" fill="#3a5a7a" stroke="#4a6a8a" stroke-width="0.5"/>
+              <text x="80" y="140" text-anchor="middle" fill="#88ccff" font-size="7" font-family="monospace">CELL MODULE 4</text>
+              <!-- BMS panel -->
+              <rect x="34" y="150" width="92" height="28" rx="3" fill="#1a1a2a" stroke="#3a3a4a" stroke-width="1"/>
+              <text x="80" y="162" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif">BMS</text>
+              <circle cx="46" cy="170" r="3" fill="#44ff44"/>
+              <circle cx="57" cy="170" r="3" fill="#ffaa00"/>
+              <circle cx="68" cy="170" r="3" fill="#4444ff"/>
+              <text x="95" y="172" fill="#888" font-size="6" font-family="monospace">SOC: 98%</text>
+              <!-- Terminal block bottom -->
+              <rect x="44" y="182" width="72" height="14" rx="3" fill="#888" stroke="#555" stroke-width="1"/>
+              <text x="80" y="192" text-anchor="middle" fill="white" font-size="6.5" font-family="sans-serif">DC TERMINALS</text>
+              <!-- Positive cap -->
+              <rect x="62" y="10" width="36" height="8" rx="3" fill="#C9A84C" stroke="#8A6B2C" stroke-width="1.5"/>
+              <text x="80" y="17" text-anchor="middle" fill="#1a1a0a" font-size="6" font-family="sans-serif" font-weight="700">+ POLE</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Energy Storage Batteries</h4><p>Lithium-based floor-standing and wall-mounted energy storage for solar hybrid systems and backup power. Scalable residential to utility-scale.</p></div>
+        </div>
+
+        <!-- MDM Software -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0d1117;">
+            <svg viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg" width="176" height="144">
+              <!-- Monitor frame -->
+              <rect x="15" y="12" width="190" height="130" rx="8" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+              <rect x="22" y="20" width="176" height="114" rx="5" fill="#0d1117"/>
+              <!-- Top bar -->
+              <rect x="22" y="20" width="176" height="20" rx="5" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+              <circle cx="34" cy="30" r="4" fill="#ff5f57"/>
+              <circle cx="46" cy="30" r="4" fill="#ffbd2e"/>
+              <circle cx="58" cy="30" r="4" fill="#28c840"/>
+              <text x="115" y="33" text-anchor="middle" fill="#8b949e" font-size="7" font-family="monospace">LonH+ Head End System</text>
+              <!-- Left sidebar -->
+              <rect x="22" y="40" width="36" height="94" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+              <text x="40" y="55" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif">📊</text>
+              <text x="40" y="70" text-anchor="middle" fill="#8b949e" font-size="6.5" font-family="sans-serif">Meters</text>
+              <text x="40" y="84" text-anchor="middle" fill="#8b949e" font-size="6.5" font-family="sans-serif">Data</text>
+              <text x="40" y="98" text-anchor="middle" fill="#8b949e" font-size="6.5" font-family="sans-serif">Reports</text>
+              <text x="40" y="112" text-anchor="middle" fill="#8b949e" font-size="6.5" font-family="sans-serif">Config</text>
+              <!-- Main chart area -->
+              <rect x="60" y="40" width="136" height="50" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+              <polyline points="65,82 78,65 91,70 104,55 117,60 130,48 143,52 156,44 169,50 182,42" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+              <polyline points="65,85 78,78 91,80 104,72 117,75 130,68 143,70 156,65 169,68 182,62" stroke="#4488ff" stroke-width="1" fill="none" stroke-opacity="0.7"/>
+              <!-- Stats row -->
+              <rect x="60" y="95" width="44" height="36" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+              <text x="82" y="108" text-anchor="middle" fill="#8b949e" font-size="6" font-family="sans-serif">Total Meters</text>
+              <text x="82" y="122" text-anchor="middle" fill="#C9A84C" font-size="12" font-family="monospace" font-weight="700">2,841</text>
+              <rect x="108" y="95" width="44" height="36" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+              <text x="130" y="108" text-anchor="middle" fill="#8b949e" font-size="6" font-family="sans-serif">Online</text>
+              <text x="130" y="122" text-anchor="middle" fill="#44ff44" font-size="12" font-family="monospace" font-weight="700">98.2%</text>
+              <rect x="156" y="95" width="40" height="36" rx="3" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+              <text x="176" y="108" text-anchor="middle" fill="#8b949e" font-size="6" font-family="sans-serif">Alarms</text>
+              <text x="176" y="122" text-anchor="middle" fill="#ff4444" font-size="12" font-family="monospace" font-weight="700">14</text>
+              <!-- Stand -->
+              <rect x="95" y="142" width="30" height="10" rx="2" fill="#30363d"/>
+              <rect x="78" y="152" width="64" height="6" rx="3" fill="#30363d"/>
+              <!-- Label -->
+              <rect x="58" y="162" width="104" height="10" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="110" y="170" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">ENERGY MANAGEMENT SOFTWARE (MDM)</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Energy Management Software (MDM)</h4><p>Head End System and MDM platform for billing analytics, commercial loss detection, load profiling, and consumer segmentation reporting.</p></div>
+        </div>
+
+        <!-- Meter Enclosure -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#f4f4f0;">
+            <svg viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" width="144" height="176">
+              <!-- Main enclosure body -->
+              <rect x="30" y="18" width="120" height="175" rx="6" fill="#c8c8c0" stroke="#888880" stroke-width="2"/>
+              <rect x="36" y="24" width="108" height="163" rx="4" fill="#d8d8d0" stroke="#aaaaaa" stroke-width="1"/>
+              <!-- Door hinges left -->
+              <rect x="30" y="38" width="8" height="16" rx="2" fill="#777" stroke="#555" stroke-width="0.8"/>
+              <rect x="30" y="140" width="8" height="16" rx="2" fill="#777" stroke="#555" stroke-width="0.8"/>
+              <!-- Door lock right -->
+              <circle cx="150" cy="105" r="6" fill="#888" stroke="#555" stroke-width="1"/>
+              <circle cx="150" cy="105" r="3" fill="#666"/>
+              <!-- Transparent window -->
+              <rect x="54" y="40" width="72" height="55" rx="3" fill="#b8d8f0" stroke="#88aacc" stroke-width="1.5" fill-opacity="0.7"/>
+              <!-- Meter visible through window -->
+              <rect x="60" y="46" width="60" height="43" rx="2" fill="#e8e8e8" fill-opacity="0.6"/>
+              <rect x="64" y="50" width="52" height="22" rx="2" fill="#1a2a3a" fill-opacity="0.8"/>
+              <text x="90" y="65" text-anchor="middle" fill="#44ff44" font-size="8" font-family="monospace" fill-opacity="0.9">kWh 00284</text>
+              <!-- Wiring space -->
+              <rect x="44" y="104" width="92" height="70" rx="3" fill="#c0c0b8" stroke="#999990" stroke-width="1"/>
+              <text x="90" y="118" text-anchor="middle" fill="#555550" font-size="7" font-family="sans-serif">WIRING COMPARTMENT</text>
+              <line x1="56" y1="128" x2="56" y2="168" stroke="#cc4444" stroke-width="2"/>
+              <line x1="66" y1="128" x2="66" y2="168" stroke="#222" stroke-width="2"/>
+              <line x1="76" y1="128" x2="76" y2="168" stroke="#4444cc" stroke-width="2"/>
+              <line x1="86" y1="128" x2="86" y2="168" stroke="#44cc44" stroke-width="2"/>
+              <line x1="104" y1="128" x2="104" y2="168" stroke="#cc4444" stroke-width="2"/>
+              <line x1="114" y1="128" x2="114" y2="168" stroke="#222" stroke-width="2"/>
+              <line x1="124" y1="128" x2="124" y2="168" stroke="#4444cc" stroke-width="2"/>
+              <!-- Bottom cable entry -->
+              <rect x="54" y="178" width="72" height="12" rx="3" fill="#888" stroke="#555" stroke-width="1"/>
+              <text x="90" y="187" text-anchor="middle" fill="white" font-size="6.5" font-family="sans-serif">CABLE ENTRY</text>
+              <!-- Label -->
+              <rect x="36" y="195" width="108" height="10" rx="3" fill="#C9A84C" fill-opacity="0.25"/>
+              <text x="90" y="203" text-anchor="middle" fill="#6B4A1C" font-size="7" font-family="sans-serif" font-weight="600">ENERGY METER ENCLOSURE</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Energy Meter Enclosures</h4><p>Weatherproof and tamper-resistant single &amp; three-phase meter enclosures for outdoor and indoor utility and distribution deployments.</p></div>
+        </div>
+
+        <!-- Test Bench -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#f0f4f0;">
+            <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" width="192" height="160">
+              <!-- Bench frame -->
+              <rect x="10" y="55" width="220" height="100" rx="5" fill="#c8d8c8" stroke="#88a888" stroke-width="2"/>
+              <!-- Meter slots -->
+              <rect x="18" y="63" width="38" height="82" rx="3" fill="#b8c8b8" stroke="#7a9a7a" stroke-width="1"/>
+              <rect x="20" y="68" width="34" height="40" rx="2" fill="#e8e8e0" stroke="#aaa" stroke-width="0.8"/>
+              <text x="37" y="82" text-anchor="middle" fill="#333" font-size="7" font-family="monospace">METER</text>
+              <text x="37" y="94" text-anchor="middle" fill="#333" font-size="7" font-family="monospace">SLOT 1</text>
+              <circle cx="37" cy="115" r="6" fill="#44ff44" fill-opacity="0.8"/>
+              <rect x="60" y="63" width="38" height="82" rx="3" fill="#b8c8b8" stroke="#7a9a7a" stroke-width="1"/>
+              <rect x="62" y="68" width="34" height="40" rx="2" fill="#e8e8e0" stroke="#aaa" stroke-width="0.8"/>
+              <text x="79" y="82" text-anchor="middle" fill="#333" font-size="7" font-family="monospace">METER</text>
+              <text x="79" y="94" text-anchor="middle" fill="#333" font-size="7" font-family="monospace">SLOT 2</text>
+              <circle cx="79" cy="115" r="6" fill="#44ff44" fill-opacity="0.8"/>
+              <rect x="102" y="63" width="38" height="82" rx="3" fill="#b8c8b8" stroke="#7a9a7a" stroke-width="1"/>
+              <rect x="104" y="68" width="34" height="40" rx="2" fill="#e8e8e0" stroke="#aaa" stroke-width="0.8"/>
+              <text x="121" y="82" text-anchor="middle" fill="#333" font-size="7" font-family="monospace">METER</text>
+              <text x="121" y="94" text-anchor="middle" fill="#333" font-size="7" font-family="monospace">SLOT 3</text>
+              <circle cx="121" cy="115" r="6" fill="#ffaa00" fill-opacity="0.8"/>
+              <!-- Control unit right -->
+              <rect x="148" y="63" width="74" height="82" rx="3" fill="#1a2a1a" stroke="#3a5a3a" stroke-width="1.5"/>
+              <text x="185" y="78" text-anchor="middle" fill="#C9A84C" font-size="7.5" font-family="sans-serif" font-weight="600">REFERENCE STD</text>
+              <rect x="155" y="82" width="60" height="22" rx="2" fill="#0a1a0a"/>
+              <text x="185" y="91" text-anchor="middle" fill="#44ff44" font-size="7" font-family="monospace">±0.002%</text>
+              <text x="185" y="101" text-anchor="middle" fill="#88cc88" font-size="6" font-family="monospace">CLASS 0.02</text>
+              <rect x="155" y="108" width="26" height="12" rx="2" fill="#2a5a2a" stroke="#4a8a4a" stroke-width="0.8"/>
+              <text x="168" y="117" text-anchor="middle" fill="white" font-size="6" font-family="sans-serif">START</text>
+              <rect x="185" y="108" width="26" height="12" rx="2" fill="#5a2a2a" stroke="#8a4a4a" stroke-width="0.8"/>
+              <text x="198" y="117" text-anchor="middle" fill="white" font-size="6" font-family="sans-serif">STOP</text>
+              <text x="185" y="135" text-anchor="middle" fill="#88aa88" font-size="6" font-family="sans-serif">USB · RS-485 · ETH</text>
+              <!-- Table legs -->
+              <rect x="20" y="155" width="14" height="35" rx="3" fill="#88a888" stroke="#6a8a6a" stroke-width="1"/>
+              <rect x="206" y="155" width="14" height="35" rx="3" fill="#88a888" stroke="#6a8a6a" stroke-width="1"/>
+              <rect x="80" y="155" width="10" height="35" rx="2" fill="#88a888"/>
+              <rect x="150" y="155" width="10" height="35" rx="2" fill="#88a888"/>
+              <!-- Label -->
+              <rect x="60" y="188" width="120" height="10" rx="3" fill="#C9A84C" fill-opacity="0.25"/>
+              <text x="120" y="196" text-anchor="middle" fill="#6B4A1C" font-size="7" font-family="sans-serif" font-weight="600">ENERGY METER TEST BENCH</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Energy Meter Test Benches</h4><p>Precision calibration and testing equipment for single and three-phase electricity meters. Verifies accuracy against international metrological standards.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════ ELECTRICAL & POWER ════ -->
+    <div class="prod-panel" id="pp-elec">
+      <p class="panel-intro">We supply a comprehensive range of high-voltage and medium-voltage electrical equipment for power transmission, distribution, and substation applications.</p>
+      <div class="prod-grid">
+
+        <!-- Power Transformer -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#1a1a10;">
+            <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" width="208" height="160">
+              <!-- Tank body -->
+              <rect x="60" y="50" width="140" height="120" rx="4" fill="#4a4a40" stroke="#888878" stroke-width="2"/>
+              <!-- Cooling fins left -->
+              <rect x="30" y="65" width="10" height="90" rx="2" fill="#5a5a50" stroke="#777768" stroke-width="1"/>
+              <rect x="22" y="65" width="10" height="90" rx="2" fill="#5a5a50" stroke="#777768" stroke-width="1"/>
+              <rect x="14" y="65" width="10" height="90" rx="2" fill="#5a5a50" stroke="#777768" stroke-width="1"/>
+              <!-- Cooling fins right -->
+              <rect x="220" y="65" width="10" height="90" rx="2" fill="#5a5a50" stroke="#777768" stroke-width="1"/>
+              <rect x="232" y="65" width="10" height="90" rx="2" fill="#5a5a50" stroke="#777768" stroke-width="1"/>
+              <!-- HV bushings top -->
+              <rect x="88" y="22" width="14" height="30" rx="3" fill="#d0c8b0" stroke="#a09880" stroke-width="1"/>
+              <line x1="95" y1="22" x2="95" y2="10" stroke="#a09880" stroke-width="2"/>
+              <circle cx="95" cy="8" r="4" fill="#C9A84C"/>
+              <rect x="113" y="18" width="14" height="34" rx="3" fill="#d0c8b0" stroke="#a09880" stroke-width="1"/>
+              <line x1="120" y1="18" x2="120" y2="6" stroke="#a09880" stroke-width="2"/>
+              <circle cx="120" cy="4" r="4" fill="#C9A84C"/>
+              <rect x="138" y="22" width="14" height="30" rx="3" fill="#d0c8b0" stroke="#a09880" stroke-width="1"/>
+              <line x1="145" y1="22" x2="145" y2="10" stroke="#a09880" stroke-width="2"/>
+              <circle cx="145" cy="8" r="4" fill="#C9A84C"/>
+              <!-- LV bushings -->
+              <rect x="168" y="30" width="10" height="22" rx="2" fill="#c0b8a0" stroke="#908870" stroke-width="1"/>
+              <line x1="173" y1="30" x2="173" y2="18" stroke="#908870" stroke-width="1.5"/>
+              <rect x="182" y="30" width="10" height="22" rx="2" fill="#c0b8a0" stroke="#908870" stroke-width="1"/>
+              <line x1="187" y1="30" x2="187" y2="18" stroke="#908870" stroke-width="1.5"/>
+              <!-- Tank top details -->
+              <rect x="65" y="50" width="130" height="12" rx="2" fill="#5a5a48" stroke="#888878" stroke-width="0.8"/>
+              <!-- Oil level gauge -->
+              <rect x="195" y="75" width="8" height="55" rx="3" fill="#222" stroke="#666" stroke-width="1"/>
+              <rect x="197" y="95" width="4" height="20" rx="1" fill="#C9A84C" fill-opacity="0.8"/>
+              <!-- Rating plate -->
+              <rect x="78" y="90" width="104" height="55" rx="3" fill="#333328" stroke="#C9A84C" stroke-width="1"/>
+              <text x="130" y="105" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">POWER TRANSFORMER</text>
+              <text x="130" y="118" text-anchor="middle" fill="#aaa" font-size="7" font-family="monospace">132 / 33 kV</text>
+              <text x="130" y="130" text-anchor="middle" fill="#aaa" font-size="7" font-family="monospace">40 MVA · ONAN</text>
+              <text x="130" y="141" text-anchor="middle" fill="#888" font-size="6" font-family="monospace">IEC 60076 · OLTC</text>
+              <!-- Ground straps -->
+              <line x1="68" y1="168" x2="68" y2="185" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="192" y1="168" x2="192" y2="185" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="60" y1="185" x2="200" y2="185" stroke="#C9A84C" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Power Transformers</h4><p>Oil-immersed and dry-type power transformers for transmission and distribution networks. Wide voltage class range for utility, industrial, and renewable applications.</p></div>
+        </div>
+
+        <!-- Distribution Transformer -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a1a0a;">
+            <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" width="176" height="176">
+              <!-- Utility pole -->
+              <rect x="105" y="10" width="10" height="210" rx="2" fill="#8B6914" stroke="#6B4914" stroke-width="1"/>
+              <!-- Cross arm -->
+              <rect x="45" y="45" width="130" height="8" rx="2" fill="#8B6914" stroke="#6B4914" stroke-width="1"/>
+              <!-- HV wires -->
+              <line x1="10" y1="42" x2="55" y2="42" stroke="#888" stroke-width="2"/>
+              <line x1="165" y1="42" x2="210" y2="42" stroke="#888" stroke-width="2"/>
+              <!-- Insulators -->
+              <circle cx="55" cy="42" r="5" fill="#d0c8b0" stroke="#aaa" stroke-width="1"/>
+              <circle cx="165" cy="42" r="5" fill="#d0c8b0" stroke="#aaa" stroke-width="1"/>
+              <!-- Drop wires to transformer -->
+              <line x1="55" y1="47" x2="80" y2="75" stroke="#888" stroke-width="1.5"/>
+              <line x1="165" y1="47" x2="140" y2="75" stroke="#888" stroke-width="1.5"/>
+              <!-- Transformer tank -->
+              <rect x="72" y="75" width="76" height="80" rx="5" fill="#4a5060" stroke="#6a7080" stroke-width="2"/>
+              <!-- Tank cooling -->
+              <rect x="72" y="82" width="76" height="10" rx="2" fill="#5a6070" stroke="#7a8090" stroke-width="0.5"/>
+              <!-- Fuse cutout -->
+              <rect x="56" y="58" width="8" height="18" rx="2" fill="#c8c0a0" stroke="#a0a080" stroke-width="1"/>
+              <rect x="156" y="58" width="8" height="18" rx="2" fill="#c8c0a0" stroke="#a0a080" stroke-width="1"/>
+              <!-- Surge arrester -->
+              <rect x="64" y="60" width="6" height="20" rx="3" fill="#cc6633" stroke="#aa4422" stroke-width="1"/>
+              <rect x="150" y="60" width="6" height="20" rx="3" fill="#cc6633" stroke="#aa4422" stroke-width="1"/>
+              <!-- Nameplate -->
+              <rect x="78" y="98" width="64" height="38" rx="2" fill="#333" stroke="#C9A84C" stroke-width="1"/>
+              <text x="110" y="112" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif" font-weight="600">DISTRIBUTION</text>
+              <text x="110" y="122" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif" font-weight="600">TRANSFORMER</text>
+              <text x="110" y="131" text-anchor="middle" fill="#aaa" font-size="6" font-family="monospace">11kV / 415V</text>
+              <!-- LV cables down -->
+              <line x1="90" y1="155" x2="82" y2="185" stroke="#cc4444" stroke-width="2"/>
+              <line x1="100" y1="155" x2="97" y2="185" stroke="#222" stroke-width="2"/>
+              <line x1="110" y1="155" x2="110" y2="185" stroke="#4444cc" stroke-width="2"/>
+              <line x1="120" y1="155" x2="120" y2="185" stroke="#44aa44" stroke-width="2"/>
+              <line x1="130" y1="155" x2="138" y2="185" stroke="#888" stroke-width="2"/>
+              <!-- Ground -->
+              <line x1="110" y1="185" x2="110" y2="210" stroke="#C9A84C" stroke-width="1.5"/>
+              <line x1="96" y1="210" x2="124" y2="210" stroke="#C9A84C" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Distribution Transformers</h4><p>Medium and low voltage distribution transformers for grid-connected and off-grid power supply. Compact, efficient designs suited to African network conditions.</p></div>
+        </div>
+
+        <!-- HV Switchgear -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#10100a;">
+            <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" width="208" height="160">
+              <!-- GIS enclosure main -->
+              <rect x="15" y="35" width="230" height="130" rx="5" fill="#3a3a30" stroke="#6a6a50" stroke-width="2"/>
+              <!-- Three phase sections -->
+              <rect x="22" y="42" width="68" height="116" rx="3" fill="#4a4a38" stroke="#7a7a58" stroke-width="1"/>
+              <rect x="96" y="42" width="68" height="116" rx="3" fill="#4a4a38" stroke="#7a7a58" stroke-width="1"/>
+              <rect x="170" y="42" width="68" height="116" rx="3" fill="#4a4a38" stroke="#7a7a58" stroke-width="1"/>
+              <!-- SF6 cylinders in each phase -->
+              <ellipse cx="56" cy="80" rx="22" ry="30" fill="#2a3a2a" stroke="#4a6a4a" stroke-width="1.5"/>
+              <text x="56" y="78" text-anchor="middle" fill="#88aa88" font-size="7" font-family="sans-serif">SF6</text>
+              <text x="56" y="88" text-anchor="middle" fill="#88aa88" font-size="6" font-family="sans-serif">GAS</text>
+              <ellipse cx="130" cy="80" rx="22" ry="30" fill="#2a3a2a" stroke="#4a6a4a" stroke-width="1.5"/>
+              <text x="130" y="78" text-anchor="middle" fill="#88aa88" font-size="7" font-family="sans-serif">SF6</text>
+              <text x="130" y="88" text-anchor="middle" fill="#88aa88" font-size="6" font-family="sans-serif">GAS</text>
+              <ellipse cx="204" cy="80" rx="22" ry="30" fill="#2a3a2a" stroke="#4a6a4a" stroke-width="1.5"/>
+              <text x="204" y="78" text-anchor="middle" fill="#88aa88" font-size="7" font-family="sans-serif">SF6</text>
+              <text x="204" y="88" text-anchor="middle" fill="#88aa88" font-size="6" font-family="sans-serif">GAS</text>
+              <!-- Drive mechanisms -->
+              <rect x="28" y="118" width="56" height="32" rx="2" fill="#222220" stroke="#555548" stroke-width="1"/>
+              <text x="56" y="130" text-anchor="middle" fill="#C9A84C" font-size="6.5" font-family="sans-serif">DRIVE MECH.</text>
+              <circle cx="44" cy="142" r="6" fill="#555" stroke="#888" stroke-width="1"/>
+              <circle cx="68" cy="142" r="6" fill="#555" stroke="#888" stroke-width="1"/>
+              <rect x="102" y="118" width="56" height="32" rx="2" fill="#222220" stroke="#555548" stroke-width="1"/>
+              <text x="130" y="130" text-anchor="middle" fill="#C9A84C" font-size="6.5" font-family="sans-serif">DRIVE MECH.</text>
+              <circle cx="118" cy="142" r="6" fill="#555" stroke="#888" stroke-width="1"/>
+              <circle cx="142" cy="142" r="6" fill="#555" stroke="#888" stroke-width="1"/>
+              <rect x="176" y="118" width="56" height="32" rx="2" fill="#222220" stroke="#555548" stroke-width="1"/>
+              <text x="204" y="130" text-anchor="middle" fill="#C9A84C" font-size="6.5" font-family="sans-serif">DRIVE MECH.</text>
+              <circle cx="192" cy="142" r="6" fill="#555" stroke="#888" stroke-width="1"/>
+              <circle cx="216" cy="142" r="6" fill="#555" stroke="#888" stroke-width="1"/>
+              <!-- Phase labels -->
+              <text x="56" y="168" text-anchor="middle" fill="#aaaaaa" font-size="10" font-family="sans-serif" font-weight="700">L1</text>
+              <text x="130" y="168" text-anchor="middle" fill="#aaaaaa" font-size="10" font-family="sans-serif" font-weight="700">L2</text>
+              <text x="204" y="168" text-anchor="middle" fill="#aaaaaa" font-size="10" font-family="sans-serif" font-weight="700">L3</text>
+              <!-- Top label -->
+              <text x="130" y="28" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">HV SWITCHGEAR (GIS) · 132kV</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>High-Voltage Switchgear &amp; Breakers</h4><p>Air-insulated and gas-insulated (GIS) switchgear, circuit breakers, disconnectors, and earthing switches for transmission and distribution substations.</p></div>
+        </div>
+
+        <!-- Surge Arrester -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a0a1a;">
+            <svg viewBox="0 0 120 220" xmlns="http://www.w3.org/2000/svg" width="96" height="176">
+              <!-- Top cap / terminal -->
+              <rect x="46" y="8" width="28" height="12" rx="4" fill="#888" stroke="#555" stroke-width="1"/>
+              <line x1="60" y1="8" x2="60" y2="2" stroke="#C9A84C" stroke-width="2.5"/>
+              <circle cx="60" cy="2" r="3" fill="#C9A84C"/>
+              <!-- Arrester body - polymer sheds -->
+              <rect x="50" y="20" width="20" height="155" rx="3" fill="#cc4422" stroke="#992211" stroke-width="1.5"/>
+              <!-- Polymer sheds (insulator ribs) -->
+              <ellipse cx="60" cy="32" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="46" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="60" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="74" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="88" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="102" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="116" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="130" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="144" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <ellipse cx="60" cy="158" rx="18" ry="6" fill="#dd5533" stroke="#bb3311" stroke-width="1"/>
+              <!-- Bottom flange -->
+              <rect x="44" y="170" width="32" height="12" rx="3" fill="#888" stroke="#555" stroke-width="1"/>
+              <!-- Ground wire -->
+              <line x1="60" y1="182" x2="60" y2="200" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="48" y1="200" x2="72" y2="200" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="52" y1="205" x2="68" y2="205" stroke="#C9A84C" stroke-width="1.5"/>
+              <line x1="56" y1="210" x2="64" y2="210" stroke="#C9A84C" stroke-width="1"/>
+              <!-- Rating text -->
+              <text x="60" y="218" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif">SURGE ARRESTER</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Surge Arresters</h4><p>Metal oxide surge arresters (MOSAs) for overvoltage protection of transformers, switchgear, cables, and grid assets at all voltage levels.</p></div>
+        </div>
+
+        <!-- Capacitor Bank -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#1a1a0a;">
+            <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" width="192" height="160">
+              <!-- Steel frame -->
+              <rect x="15" y="20" width="210" height="160" rx="4" fill="none" stroke="#888878" stroke-width="2"/>
+              <!-- Horizontal rails -->
+              <rect x="15" y="60" width="210" height="6" rx="1" fill="#888878"/>
+              <rect x="15" y="114" width="210" height="6" rx="1" fill="#888878"/>
+              <!-- Capacitor cans - top row -->
+              <rect x="28" y="24" width="32" height="34" rx="4" fill="#b0b0c8" stroke="#8888aa" stroke-width="1.5"/>
+              <line x1="44" y1="24" x2="44" y2="18" stroke="#888" stroke-width="2"/>
+              <line x1="44" y1="58" x2="44" y2="64" stroke="#888" stroke-width="2"/>
+              <rect x="70" y="24" width="32" height="34" rx="4" fill="#b0b0c8" stroke="#8888aa" stroke-width="1.5"/>
+              <line x1="86" y1="24" x2="86" y2="18" stroke="#888" stroke-width="2"/>
+              <line x1="86" y1="58" x2="86" y2="64" stroke="#888" stroke-width="2"/>
+              <rect x="112" y="24" width="32" height="34" rx="4" fill="#b0b0c8" stroke="#8888aa" stroke-width="1.5"/>
+              <line x1="128" y1="24" x2="128" y2="18" stroke="#888" stroke-width="2"/>
+              <line x1="128" y1="58" x2="128" y2="64" stroke="#888" stroke-width="2"/>
+              <rect x="154" y="24" width="32" height="34" rx="4" fill="#b0b0c8" stroke="#8888aa" stroke-width="1.5"/>
+              <line x1="170" y1="24" x2="170" y2="18" stroke="#888" stroke-width="2"/>
+              <line x1="170" y1="58" x2="170" y2="64" stroke="#888" stroke-width="2"/>
+              <rect x="196" y="24" width="22" height="34" rx="4" fill="#b0b0c8" stroke="#8888aa" stroke-width="1.5"/>
+              <line x1="207" y1="24" x2="207" y2="18" stroke="#888" stroke-width="2"/>
+              <line x1="207" y1="58" x2="207" y2="64" stroke="#888" stroke-width="2"/>
+              <!-- Capacitor cans - middle row -->
+              <rect x="28" y="68" width="32" height="34" rx="4" fill="#c8b0b0" stroke="#aa8888" stroke-width="1.5"/>
+              <line x1="44" y1="68" x2="44" y2="62" stroke="#888" stroke-width="2"/>
+              <line x1="44" y1="102" x2="44" y2="108" stroke="#888" stroke-width="2"/>
+              <rect x="70" y="68" width="32" height="34" rx="4" fill="#c8b0b0" stroke="#aa8888" stroke-width="1.5"/>
+              <line x1="86" y1="68" x2="86" y2="62" stroke="#888" stroke-width="2"/>
+              <line x1="86" y1="102" x2="86" y2="108" stroke="#888" stroke-width="2"/>
+              <rect x="112" y="68" width="32" height="34" rx="4" fill="#c8b0b0" stroke="#aa8888" stroke-width="1.5"/>
+              <line x1="128" y1="68" x2="128" y2="62" stroke="#888" stroke-width="2"/>
+              <line x1="128" y1="102" x2="128" y2="108" stroke="#888" stroke-width="2"/>
+              <rect x="154" y="68" width="32" height="34" rx="4" fill="#c8b0b0" stroke="#aa8888" stroke-width="1.5"/>
+              <rect x="196" y="68" width="22" height="34" rx="4" fill="#c8b0b0" stroke="#aa8888" stroke-width="1.5"/>
+              <!-- Bottom row -->
+              <rect x="28" y="122" width="32" height="34" rx="4" fill="#b0c8b0" stroke="#88aa88" stroke-width="1.5"/>
+              <rect x="70" y="122" width="32" height="34" rx="4" fill="#b0c8b0" stroke="#88aa88" stroke-width="1.5"/>
+              <rect x="112" y="122" width="32" height="34" rx="4" fill="#b0c8b0" stroke="#88aa88" stroke-width="1.5"/>
+              <rect x="154" y="122" width="32" height="34" rx="4" fill="#b0c8b0" stroke="#88aa88" stroke-width="1.5"/>
+              <rect x="196" y="122" width="22" height="34" rx="4" fill="#b0c8b0" stroke="#88aa88" stroke-width="1.5"/>
+              <!-- Bus bar top -->
+              <line x1="30" y1="18" x2="215" y2="18" stroke="#C9A84C" stroke-width="3"/>
+              <!-- Ground bus bottom -->
+              <line x1="30" y1="165" x2="215" y2="165" stroke="#888" stroke-width="2"/>
+              <line x1="120" y1="165" x2="120" y2="180" stroke="#C9A84C" stroke-width="2"/>
+              <!-- Label -->
+              <rect x="70" y="172" width="100" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="120" y="181" text-anchor="middle" fill="#C9A84C" font-size="7.5" font-family="sans-serif" font-weight="600">CAPACITOR BANK · MVAR</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Capacitors &amp; Filters</h4><p>Shunt capacitor banks, filter capacitors, and harmonic filter systems for power factor correction and power quality improvement in networks and industrial facilities.</p></div>
+        </div>
+
+        <!-- Cable Accessories -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a1a1a;">
+            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" width="192" height="152">
+              <!-- Cable cross section -->
+              <circle cx="80" cy="95" r="60" fill="#1a2a2a" stroke="#2a4a4a" stroke-width="1.5"/>
+              <!-- Outer sheath -->
+              <circle cx="80" cy="95" r="58" fill="none" stroke="#333" stroke-width="8"/>
+              <!-- Armour -->
+              <circle cx="80" cy="95" r="50" fill="none" stroke="#666" stroke-width="5" stroke-dasharray="4,3"/>
+              <!-- Insulation -->
+              <circle cx="80" cy="95" r="44" fill="none" stroke="#cc4422" stroke-width="6"/>
+              <!-- Semi-con -->
+              <circle cx="80" cy="95" r="36" fill="none" stroke="#333" stroke-width="3"/>
+              <!-- Conductor -->
+              <circle cx="80" cy="95" r="28" fill="#C9A84C" fill-opacity="0.9" stroke="#8A6B2C" stroke-width="2"/>
+              <!-- Conductor strands pattern -->
+              <circle cx="80" cy="83" r="6" fill="#8A6B2C"/>
+              <circle cx="72" cy="92" r="6" fill="#8A6B2C"/>
+              <circle cx="88" cy="92" r="6" fill="#8A6B2C"/>
+              <circle cx="80" cy="101" r="6" fill="#8A6B2C"/>
+              <circle cx="80" cy="95" r="5" fill="#C9A84C"/>
+              <!-- Legend right side -->
+              <line x1="148" y1="42" x2="165" y2="42" stroke="#333" stroke-width="8"/>
+              <text x="170" y="46" fill="#888" font-size="7" font-family="sans-serif">Outer Sheath</text>
+              <line x1="148" y1="58" x2="165" y2="58" stroke="#666" stroke-width="5" stroke-dasharray="4,3"/>
+              <text x="170" y="62" fill="#888" font-size="7" font-family="sans-serif">Armour</text>
+              <line x1="148" y1="74" x2="165" y2="74" stroke="#cc4422" stroke-width="6"/>
+              <text x="170" y="78" fill="#888" font-size="7" font-family="sans-serif">XLPE Insulation</text>
+              <line x1="148" y1="90" x2="165" y2="90" stroke="#333" stroke-width="3"/>
+              <text x="170" y="94" fill="#888" font-size="7" font-family="sans-serif">Semi-con</text>
+              <circle cx="156" cy="106" r="5" fill="#C9A84C"/>
+              <text x="170" y="110" fill="#888" font-size="7" font-family="sans-serif">Cu Conductor</text>
+              <!-- Voltage rating -->
+              <rect x="148" y="120" width="80" height="30" rx="3" fill="#1a2a2a" stroke="#C9A84C" stroke-width="1"/>
+              <text x="188" y="132" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif" font-weight="600">HV CABLE</text>
+              <text x="188" y="144" text-anchor="middle" fill="#aaa" font-size="7" font-family="monospace">132kV · XLPE</text>
+              <!-- Bottom label -->
+              <text x="120" y="178" text-anchor="middle" fill="#C9A84C" font-size="7.5" font-family="sans-serif" font-weight="600">CABLE ACCESSORIES &amp; CONNECTORS</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Cable Accessories &amp; Connectors</h4><p>HV and MV cable joints, terminations, connectors, and accessories for underground and overhead cable systems at all voltage levels.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════ ENERGY STORAGE & CONVERSION ════ -->
+    <div class="prod-panel" id="pp-stor">
+      <p class="panel-intro">Advanced energy storage and power conversion products for grid-scale, commercial, and industrial applications.</p>
+      <div class="prod-grid">
+
+        <!-- BESS -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a0a1a;">
+            <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" width="208" height="160">
+              <!-- Three battery cabinets -->
+              <rect x="10" y="25" width="70" height="145" rx="5" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="2"/>
+              <rect x="95" y="25" width="70" height="145" rx="5" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="2"/>
+              <rect x="180" y="25" width="70" height="145" rx="5" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="2"/>
+              <!-- Cabinet 1 details -->
+              <rect x="16" y="32" width="58" height="28" rx="3" fill="#0a1a0a" stroke="#2a5a2a" stroke-width="1"/>
+              <text x="45" y="44" text-anchor="middle" fill="#44ff44" font-size="7" font-family="monospace">SOC 96%</text>
+              <text x="45" y="55" text-anchor="middle" fill="#88ff88" font-size="6" font-family="monospace">280 kWh</text>
+              <rect x="16" y="64" width="58" height="70" rx="2" fill="#0d1f2d" stroke="#1a3a5a" stroke-width="1"/>
+              <rect x="20" y="68" width="50" height="12" rx="1" fill="#2a5a8a" stroke="#3a7aaa" stroke-width="0.5"/>
+              <rect x="20" y="84" width="50" height="12" rx="1" fill="#2a5a8a" stroke="#3a7aaa" stroke-width="0.5"/>
+              <rect x="20" y="100" width="50" height="12" rx="1" fill="#2a5a8a" stroke="#3a7aaa" stroke-width="0.5"/>
+              <rect x="20" y="116" width="50" height="12" rx="1" fill="#2a5a8a" stroke="#3a7aaa" stroke-width="0.5"/>
+              <circle cx="26" cy="144" r="4" fill="#44ff44"/>
+              <circle cx="38" cy="144" r="4" fill="#ffaa00"/>
+              <circle cx="50" cy="144" r="4" fill="#4444ff"/>
+              <!-- Cabinet 2 details -->
+              <rect x="101" y="32" width="58" height="28" rx="3" fill="#0a1a0a" stroke="#2a5a2a" stroke-width="1"/>
+              <text x="130" y="44" text-anchor="middle" fill="#44ff44" font-size="7" font-family="monospace">SOC 94%</text>
+              <text x="130" y="55" text-anchor="middle" fill="#88ff88" font-size="6" font-family="monospace">280 kWh</text>
+              <rect x="101" y="64" width="58" height="70" rx="2" fill="#0d1f2d" stroke="#1a3a5a" stroke-width="1"/>
+              <rect x="105" y="68" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <rect x="105" y="84" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <rect x="105" y="100" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <rect x="105" y="116" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <circle cx="111" cy="144" r="4" fill="#44ff44"/>
+              <circle cx="123" cy="144" r="4" fill="#44ff44"/>
+              <!-- Cabinet 3 details -->
+              <rect x="186" y="32" width="58" height="28" rx="3" fill="#0a1a0a" stroke="#2a5a2a" stroke-width="1"/>
+              <text x="215" y="44" text-anchor="middle" fill="#44ff44" font-size="7" font-family="monospace">SOC 97%</text>
+              <text x="215" y="55" text-anchor="middle" fill="#88ff88" font-size="6" font-family="monospace">280 kWh</text>
+              <rect x="186" y="64" width="58" height="70" rx="2" fill="#0d1f2d" stroke="#1a3a5a" stroke-width="1"/>
+              <rect x="190" y="68" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <rect x="190" y="84" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <rect x="190" y="100" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <rect x="190" y="116" width="50" height="12" rx="1" fill="#2a5a8a"/>
+              <circle cx="196" cy="144" r="4" fill="#44ff44"/>
+              <!-- DC bus top -->
+              <line x1="45" y1="25" x2="45" y2="15" stroke="#ff4444" stroke-width="2"/>
+              <line x1="130" y1="25" x2="130" y2="15" stroke="#ff4444" stroke-width="2"/>
+              <line x1="215" y1="25" x2="215" y2="15" stroke="#ff4444" stroke-width="2"/>
+              <line x1="10" y1="15" x2="250" y2="15" stroke="#C9A84C" stroke-width="2"/>
+              <!-- Label -->
+              <rect x="70" y="177" width="120" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="130" y="186" text-anchor="middle" fill="#E8C96A" font-size="7.5" font-family="sans-serif" font-weight="600">BATTERY ENERGY STORAGE (BESS)</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Battery Energy Storage Systems (BESS)</h4><p>Grid-scale and commercial BESS for peak shaving, frequency regulation, renewable energy integration, and backup power. Modular and scalable architecture.</p></div>
+        </div>
+
+        <!-- Solar PV Inverter -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a1a0a;">
+            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" width="192" height="152">
+              <!-- Solar panels left -->
+              <rect x="10" y="25" width="80" height="55" rx="3" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="1.5"/>
+              <line x1="10" y1="43" x2="90" y2="43" stroke="#2a4a6a" stroke-width="1"/>
+              <line x1="10" y1="61" x2="90" y2="61" stroke="#2a4a6a" stroke-width="1"/>
+              <line x1="30" y1="25" x2="30" y2="80" stroke="#2a4a6a" stroke-width="1"/>
+              <line x1="50" y1="25" x2="50" y2="80" stroke="#2a4a6a" stroke-width="1"/>
+              <line x1="70" y1="25" x2="70" y2="80" stroke="#2a4a6a" stroke-width="1"/>
+              <text x="50" y="50" text-anchor="middle" fill="#4488ff" font-size="7" font-family="sans-serif">SOLAR PV</text>
+              <text x="50" y="62" text-anchor="middle" fill="#88aaff" font-size="6" font-family="sans-serif">DC 600V</text>
+              <!-- Sun -->
+              <circle cx="22" cy="13" r="8" fill="#FFD700" fill-opacity="0.9"/>
+              <line x1="22" y1="2" x2="22" y2="0" stroke="#FFD700" stroke-width="1.5"/>
+              <line x1="31" y1="4" x2="33" y2="3" stroke="#FFD700" stroke-width="1.5"/>
+              <line x1="35" y1="13" x2="37" y2="13" stroke="#FFD700" stroke-width="1.5"/>
+              <line x1="31" y1="22" x2="33" y2="24" stroke="#FFD700" stroke-width="1.5"/>
+              <!-- DC cable -->
+              <line x1="90" y1="52" x2="115" y2="52" stroke="#ff4444" stroke-width="2"/>
+              <line x1="90" y1="58" x2="115" y2="58" stroke="#333" stroke-width="2"/>
+              <!-- Inverter unit -->
+              <rect x="115" y="30" width="80" height="95" rx="5" fill="#2a3a2a" stroke="#4a6a4a" stroke-width="2"/>
+              <rect x="122" y="38" width="66" height="40" rx="3" fill="#1a2a1a" stroke="#3a5a3a" stroke-width="1"/>
+              <!-- Waveform display -->
+              <path d="M126,58 Q133,45 140,58 Q147,71 154,58 Q161,45 168,58 Q175,71 182,58" stroke="#44ff44" stroke-width="1.5" fill="none"/>
+              <line x1="124" y1="58" x2="186" y2="58" stroke="#334433" stroke-width="0.5" stroke-dasharray="2,2"/>
+              <text x="155" y="90" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif">MPPT INVERTER</text>
+              <text x="155" y="102" text-anchor="middle" fill="#88aa88" font-size="6" font-family="monospace">η = 98.4%</text>
+              <circle cx="130" cy="112" r="4" fill="#44ff44"/>
+              <circle cx="144" cy="112" r="4" fill="#ffaa00"/>
+              <text x="165" y="116" fill="#666" font-size="6" font-family="sans-serif">STATUS</text>
+              <!-- AC output cable -->
+              <line x1="195" y1="55" x2="220" y2="55" stroke="#ff4444" stroke-width="2"/>
+              <line x1="195" y1="62" x2="220" y2="62" stroke="#333" stroke-width="2"/>
+              <line x1="195" y1="69" x2="220" y2="69" stroke="#4444cc" stroke-width="2"/>
+              <!-- Grid connection -->
+              <rect x="220" y="40" width="15" height="40" rx="2" fill="#888" stroke="#555" stroke-width="1"/>
+              <text x="227" y="58" text-anchor="middle" fill="white" font-size="5" font-family="sans-serif" writing-mode="tb">GRID AC</text>
+              <!-- Label -->
+              <rect x="68" y="148" width="104" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="120" y="157" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">SOLAR PV INVERTER</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Solar PV Inverters &amp; Converters</h4><p>String inverters, central inverters, and hybrid inverters for solar PV systems across residential, commercial, and utility scales.</p></div>
+        </div>
+
+        <!-- HVDC -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#1a1a0a;">
+            <svg viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg" width="208" height="152">
+              <!-- Rectifier station left -->
+              <rect x="10" y="30" width="90" height="110" rx="6" fill="#1a1a2a" stroke="#3a3a6a" stroke-width="2"/>
+              <rect x="18" y="38" width="74" height="30" rx="3" fill="#0a0a1a" stroke="#2a2a5a" stroke-width="1"/>
+              <text x="55" y="52" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">RECTIFIER</text>
+              <text x="55" y="62" text-anchor="middle" fill="#8888cc" font-size="6" font-family="monospace">AC → DC</text>
+              <!-- Thyristor valve symbol -->
+              <polygon points="28,85 50,72 50,98" fill="#2244aa" stroke="#4466cc" stroke-width="1"/>
+              <line x1="50" y1="72" x2="50" y2="98" stroke="#4466cc" stroke-width="2"/>
+              <line x1="50" y1="85" x2="65" y2="85" stroke="#C9A84C" stroke-width="1.5"/>
+              <polygon points="28,105 50,92 50,118" fill="#2244aa" stroke="#4466cc" stroke-width="1"/>
+              <line x1="50" y1="92" x2="50" y2="118" stroke="#4466cc" stroke-width="2"/>
+              <text x="55" y="130" text-anchor="middle" fill="#88aacc" font-size="6" font-family="sans-serif">±400kV DC</text>
+              <text x="55" y="140" text-anchor="middle" fill="#88aacc" font-size="6" font-family="sans-serif">VSC VALVES</text>
+              <!-- DC transmission line -->
+              <line x1="100" y1="75" x2="160" y2="75" stroke="#ff4444" stroke-width="3"/>
+              <line x1="100" y1="90" x2="160" y2="90" stroke="#333" stroke-width="3"/>
+              <text x="130" y="85" text-anchor="middle" fill="#ff6666" font-size="7" font-family="monospace">+ DC</text>
+              <text x="130" y="100" text-anchor="middle" fill="#888" font-size="7" font-family="monospace">− DC</text>
+              <!-- Distance arrow -->
+              <line x1="105" y1="108" x2="155" y2="108" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3,2"/>
+              <text x="130" y="118" text-anchor="middle" fill="#C9A84C" font-size="6" font-family="sans-serif">Long Distance</text>
+              <!-- Inverter station right -->
+              <rect x="160" y="30" width="90" height="110" rx="6" fill="#1a2a1a" stroke="#3a6a3a" stroke-width="2"/>
+              <rect x="168" y="38" width="74" height="30" rx="3" fill="#0a1a0a" stroke="#2a5a2a" stroke-width="1"/>
+              <text x="205" y="52" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">INVERTER</text>
+              <text x="205" y="62" text-anchor="middle" fill="#88cc88" font-size="6" font-family="monospace">DC → AC</text>
+              <text x="205" y="130" text-anchor="middle" fill="#88ccaa" font-size="6" font-family="sans-serif">AC GRID OUTPUT</text>
+              <text x="205" y="140" text-anchor="middle" fill="#88ccaa" font-size="6" font-family="sans-serif">400kV / 50Hz</text>
+              <!-- Label -->
+              <rect x="80" y="155" width="100" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="130" y="164" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">HVDC EQUIPMENT</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>HVDC Equipment</h4><p>High-Voltage Direct Current converter stations and components for long-distance power transmission and offshore grid interconnections.</p></div>
+        </div>
+
+        <!-- FACTS -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a0a1a;">
+            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" width="192" height="152">
+              <!-- Grid connection at top -->
+              <line x1="120" y1="10" x2="120" y2="40" stroke="#C9A84C" stroke-width="3"/>
+              <text x="120" y="8" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif">AC GRID BUS</text>
+              <!-- Transformer -->
+              <rect x="90" y="40" width="60" height="35" rx="4" fill="#2a2a3a" stroke="#4a4a6a" stroke-width="1.5"/>
+              <text x="120" y="55" text-anchor="middle" fill="#aaaacc" font-size="7" font-family="sans-serif">COUPLING</text>
+              <text x="120" y="66" text-anchor="middle" fill="#aaaacc" font-size="7" font-family="sans-serif">TRANSFORMER</text>
+              <line x1="120" y1="75" x2="120" y2="95" stroke="#C9A84C" stroke-width="2"/>
+              <!-- SVC/STATCOM main unit -->
+              <rect x="40" y="95" width="160" height="70" rx="6" fill="#1a1a2a" stroke="#3a3a6a" stroke-width="2"/>
+              <!-- Capacitor bank left -->
+              <rect x="50" y="105" width="55" height="50" rx="3" fill="#0a0a1a" stroke="#2a2a5a" stroke-width="1"/>
+              <text x="77" y="120" text-anchor="middle" fill="#6688cc" font-size="7" font-family="sans-serif">CAPACITOR</text>
+              <rect x="56" y="126" width="43" height="6" rx="1" fill="#4466cc"/>
+              <rect x="56" y="136" width="43" height="6" rx="1" fill="#4466cc"/>
+              <rect x="56" y="146" width="43" height="6" rx="1" fill="#4466cc"/>
+              <!-- TCR reactor right -->
+              <rect x="135" y="105" width="55" height="50" rx="3" fill="#0a0a1a" stroke="#2a5a2a" stroke-width="1"/>
+              <text x="162" y="120" text-anchor="middle" fill="#66cc88" font-size="7" font-family="sans-serif">REACTOR</text>
+              <rect x="141" y="126" width="43" height="7" rx="2" fill="none" stroke="#44cc66" stroke-width="1.5"/>
+              <rect x="141" y="136" width="43" height="7" rx="2" fill="none" stroke="#44cc66" stroke-width="1.5"/>
+              <rect x="141" y="146" width="43" height="7" rx="2" fill="none" stroke="#44cc66" stroke-width="1.5"/>
+              <!-- Label in centre -->
+              <text x="120" y="115" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">SVC / STATCOM</text>
+              <!-- Ground -->
+              <line x1="120" y1="165" x2="120" y2="178" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="105" y1="178" x2="135" y2="178" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="110" y1="183" x2="130" y2="183" stroke="#C9A84C" stroke-width="1.5"/>
+              <line x1="115" y1="188" x2="125" y2="188" stroke="#C9A84C" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>FACTS Systems</h4><p>Flexible AC Transmission Systems including Static VAR Compensators (SVCs) and STATCOMs for voltage stability and reactive power management.</p></div>
+        </div>
+
+        <!-- SFC -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#1a0a0a;">
+            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" width="192" height="152">
+              <!-- Input section -->
+              <rect x="10" y="30" width="60" height="100" rx="5" fill="#1a1a2a" stroke="#3a3a6a" stroke-width="1.5"/>
+              <text x="40" y="50" text-anchor="middle" fill="#6688cc" font-size="8" font-family="sans-serif" font-weight="600">INPUT</text>
+              <text x="40" y="63" text-anchor="middle" fill="#4466cc" font-size="18" font-family="sans-serif" font-weight="700">50</text>
+              <text x="40" y="76" text-anchor="middle" fill="#6688cc" font-size="8" font-family="sans-serif">Hz</text>
+              <line x1="40" y1="100" x2="40" y2="115" stroke="#4466cc" stroke-width="1.5"/>
+              <path d="M28,100 Q40,88 52,100" stroke="#4466cc" stroke-width="1.5" fill="none"/>
+              <path d="M24,108 Q40,93 56,108" stroke="#4466cc" stroke-width="1" fill="none" stroke-opacity="0.5"/>
+              <!-- Converter block centre -->
+              <rect x="80" y="20" width="80" height="130" rx="6" fill="#2a1a1a" stroke="#6a3a3a" stroke-width="2"/>
+              <text x="120" y="42" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">STATIC FREQ.</text>
+              <text x="120" y="54" text-anchor="middle" fill="#C9A84C" font-size="8" font-family="sans-serif" font-weight="600">CONVERTER</text>
+              <!-- Power electronics -->
+              <rect x="88" y="62" width="64" height="50" rx="3" fill="#1a1a1a" stroke="#4a3a3a" stroke-width="1"/>
+              <text x="120" y="80" text-anchor="middle" fill="#cc4444" font-size="7" font-family="sans-serif">AC→DC→AC</text>
+              <text x="120" y="92" text-anchor="middle" fill="#cc6644" font-size="6" font-family="sans-serif">THYRISTOR</text>
+              <text x="120" y="103" text-anchor="middle" fill="#cc6644" font-size="6" font-family="sans-serif">BRIDGE</text>
+              <text x="120" y="125" text-anchor="middle" fill="#888" font-size="6" font-family="monospace">Up to 100 MVA</text>
+              <text x="120" y="138" text-anchor="middle" fill="#888" font-size="6" font-family="monospace">±0.1% freq ctrl</text>
+              <!-- Output section -->
+              <rect x="170" y="30" width="60" height="100" rx="5" fill="#1a2a1a" stroke="#3a6a3a" stroke-width="1.5"/>
+              <text x="200" y="50" text-anchor="middle" fill="#66cc88" font-size="8" font-family="sans-serif" font-weight="600">OUTPUT</text>
+              <text x="200" y="63" text-anchor="middle" fill="#44cc66" font-size="18" font-family="sans-serif" font-weight="700">16.7</text>
+              <text x="200" y="76" text-anchor="middle" fill="#66cc88" font-size="8" font-family="sans-serif">Hz</text>
+              <line x1="200" y1="100" x2="200" y2="115" stroke="#44cc66" stroke-width="1.5"/>
+              <path d="M188,100 Q200,88 212,100" stroke="#44cc66" stroke-width="1.5" fill="none"/>
+              <!-- Arrows -->
+              <line x1="70" y1="80" x2="80" y2="80" stroke="#C9A84C" stroke-width="2"/>
+              <polygon points="78,76 84,80 78,84" fill="#C9A84C"/>
+              <line x1="160" y1="80" x2="170" y2="80" stroke="#C9A84C" stroke-width="2"/>
+              <polygon points="168,76 174,80 168,84" fill="#C9A84C"/>
+              <!-- Label -->
+              <rect x="68" y="162" width="104" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="120" y="171" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">STATIC FREQUENCY CONVERTER (SFC)</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Static Frequency Converters (SFC)</h4><p>Frequency conversion systems for industrial, traction, and test applications requiring independent frequency control independent of the grid.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════ PROTECTION & AUTOMATION ════ -->
+    <div class="prod-panel" id="pp-prot">
+      <p class="panel-intro">Integrated protection, automation, and control products for digital substations and intelligent power networks.</p>
+      <div class="prod-grid">
+
+        <!-- Protection Relays -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#1a0a0a;">
+            <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="160" height="176">
+              <!-- Relay panel chassis -->
+              <rect x="20" y="15" width="160" height="195" rx="4" fill="#2a2a2a" stroke="#555" stroke-width="2"/>
+              <!-- Line protection relay -->
+              <rect x="28" y="22" width="144" height="44" rx="3" fill="#1a1a1a" stroke="#C9A84C" stroke-width="1.5"/>
+              <text x="68" y="35" fill="#C9A84C" font-size="7" font-family="monospace" font-weight="600">REL670</text>
+              <text x="68" y="46" fill="#888" font-size="6" font-family="monospace">LINE PROTECTION</text>
+              <rect x="140" y="25" width="28" height="18" rx="2" fill="#1a2a1a" stroke="#2a5a2a" stroke-width="0.5"/>
+              <text x="154" y="33" text-anchor="middle" fill="#44ff44" font-size="5.5" font-family="monospace">NORMAL</text>
+              <text x="154" y="41" text-anchor="middle" fill="#44ff44" font-size="5" font-family="monospace">0.00 kA</text>
+              <circle cx="36" cy="35" r="4" fill="#44ff44" fill-opacity="0.8"/>
+              <circle cx="46" cy="35" r="4" fill="#888" fill-opacity="0.5"/>
+              <!-- Transformer protection -->
+              <rect x="28" y="70" width="144" height="44" rx="3" fill="#1a1a1a" stroke="#C9A84C" stroke-width="1.5"/>
+              <text x="68" y="83" fill="#C9A84C" font-size="7" font-family="monospace" font-weight="600">RET670</text>
+              <text x="68" y="94" fill="#888" font-size="6" font-family="monospace">TRANSFORMER PROTECTION</text>
+              <rect x="140" y="73" width="28" height="18" rx="2" fill="#1a2a1a" stroke="#2a5a2a" stroke-width="0.5"/>
+              <text x="154" y="81" text-anchor="middle" fill="#44ff44" font-size="5.5" font-family="monospace">NORMAL</text>
+              <circle cx="36" cy="83" r="4" fill="#44ff44" fill-opacity="0.8"/>
+              <circle cx="46" cy="83" r="4" fill="#ffaa00" fill-opacity="0.7"/>
+              <!-- Busbar protection -->
+              <rect x="28" y="118" width="144" height="44" rx="3" fill="#1a1a1a" stroke="#C9A84C" stroke-width="1.5"/>
+              <text x="68" y="131" fill="#C9A84C" font-size="7" font-family="monospace" font-weight="600">REB670</text>
+              <text x="68" y="142" fill="#888" font-size="6" font-family="monospace">BUSBAR PROTECTION</text>
+              <circle cx="36" cy="131" r="4" fill="#44ff44" fill-opacity="0.8"/>
+              <circle cx="46" cy="131" r="4" fill="#888" fill-opacity="0.5"/>
+              <!-- IEC 61850 badge -->
+              <rect x="28" y="168" width="144" height="22" rx="3" fill="#0a1a2a" stroke="#2a4a8a" stroke-width="1"/>
+              <text x="100" y="178" text-anchor="middle" fill="#4488ff" font-size="7" font-family="sans-serif">IEC 61850 · GOOSE · MMS</text>
+              <text x="100" y="187" text-anchor="middle" fill="#6699cc" font-size="6" font-family="monospace">Sampled Values · XSWI · XCBR</text>
+              <!-- Label -->
+              <rect x="28" y="197" width="144" height="10" rx="2" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="100" y="205" text-anchor="middle" fill="#C9A84C" font-size="7" font-family="sans-serif" font-weight="600">PROTECTION RELAYS</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Protection Relays</h4><p>Numerical protection relays for line, transformer, busbar, generator, and motor protection. IEC 61850-compliant for digital substation integration.</p></div>
+        </div>
+
+        <!-- Substation Automation -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a1a2a;">
+            <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" width="192" height="160">
+              <!-- Station level - top -->
+              <rect x="75" y="12" width="90" height="32" rx="5" fill="#1a2a3a" stroke="#C9A84C" stroke-width="1.5"/>
+              <text x="120" y="24" text-anchor="middle" fill="#C9A84C" font-size="7.5" font-family="sans-serif" font-weight="600">STATION HMI</text>
+              <text x="120" y="36" text-anchor="middle" fill="#88aacc" font-size="6" font-family="monospace">Engineering WS</text>
+              <!-- Station bus -->
+              <line x1="20" y1="58" x2="220" y2="58" stroke="#C9A84C" stroke-width="2"/>
+              <text x="20" y="52" fill="#C9A84C" font-size="6" font-family="sans-serif">STATION BUS (IEC 61850)</text>
+              <line x1="120" y1="44" x2="120" y2="58" stroke="#C9A84C" stroke-width="1.5"/>
+              <!-- Bay controllers -->
+              <rect x="14" y="64" width="58" height="42" rx="3" fill="#1a2a1a" stroke="#2a5a3a" stroke-width="1.2"/>
+              <text x="43" y="78" text-anchor="middle" fill="#44cc88" font-size="6.5" font-family="sans-serif" font-weight="600">BCU</text>
+              <text x="43" y="88" text-anchor="middle" fill="#66aa66" font-size="5.5" font-family="monospace">Bay 1</text>
+              <text x="43" y="98" text-anchor="middle" fill="#66aa66" font-size="5" font-family="monospace">132kV Feeder</text>
+              <rect x="91" y="64" width="58" height="42" rx="3" fill="#1a2a1a" stroke="#2a5a3a" stroke-width="1.2"/>
+              <text x="120" y="78" text-anchor="middle" fill="#44cc88" font-size="6.5" font-family="sans-serif" font-weight="600">BCU</text>
+              <text x="120" y="88" text-anchor="middle" fill="#66aa66" font-size="5.5" font-family="monospace">Bay 2</text>
+              <text x="120" y="98" text-anchor="middle" fill="#66aa66" font-size="5" font-family="monospace">Transformer</text>
+              <rect x="168" y="64" width="58" height="42" rx="3" fill="#1a2a1a" stroke="#2a5a3a" stroke-width="1.2"/>
+              <text x="197" y="78" text-anchor="middle" fill="#44cc88" font-size="6.5" font-family="sans-serif" font-weight="600">RTU</text>
+              <text x="197" y="88" text-anchor="middle" fill="#66aa66" font-size="5.5" font-family="monospace">Bay 3</text>
+              <text x="197" y="98" text-anchor="middle" fill="#66aa66" font-size="5" font-family="monospace">Busbar Prot.</text>
+              <!-- Process bus -->
+              <line x1="20" y1="120" x2="220" y2="120" stroke="#4488ff" stroke-width="1.5"/>
+              <text x="20" y="115" fill="#4488ff" font-size="6" font-family="sans-serif">PROCESS BUS (Sampled Values)</text>
+              <line x1="43" y1="106" x2="43" y2="120" stroke="#4488ff" stroke-width="1.2"/>
+              <line x1="120" y1="106" x2="120" y2="120" stroke="#4488ff" stroke-width="1.2"/>
+              <line x1="197" y1="106" x2="197" y2="120" stroke="#4488ff" stroke-width="1.2"/>
+              <!-- Field devices -->
+              <rect x="20" y="126" width="40" height="22" rx="2" fill="#1a1a2a" stroke="#2a2a6a" stroke-width="1"/>
+              <text x="40" y="137" text-anchor="middle" fill="#8888cc" font-size="5.5" font-family="monospace">IED/MU</text>
+              <text x="40" y="145" text-anchor="middle" fill="#6666aa" font-size="5" font-family="monospace">CT/VT</text>
+              <rect x="100" y="126" width="40" height="22" rx="2" fill="#1a1a2a" stroke="#2a2a6a" stroke-width="1"/>
+              <text x="120" y="137" text-anchor="middle" fill="#8888cc" font-size="5.5" font-family="monospace">IED/MU</text>
+              <text x="120" y="145" text-anchor="middle" fill="#6666aa" font-size="5" font-family="monospace">CB/DS</text>
+              <rect x="180" y="126" width="40" height="22" rx="2" fill="#1a1a2a" stroke="#2a2a6a" stroke-width="1"/>
+              <text x="200" y="137" text-anchor="middle" fill="#8888cc" font-size="5.5" font-family="monospace">IED/MU</text>
+              <text x="200" y="145" text-anchor="middle" fill="#6666aa" font-size="5" font-family="monospace">Sensor</text>
+              <!-- Label -->
+              <rect x="62" y="162" width="116" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="120" y="171" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">SUBSTATION AUTOMATION (IEC 61850)</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Substation Automation Systems</h4><p>Integrated automation hardware and software including Bay Control Units (BCUs), Remote Terminal Units (RTUs), and IEC 61850 gateways.</p></div>
+        </div>
+
+        <!-- Communication Networks -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0a0a1a;">
+            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg" width="192" height="152">
+              <!-- Central switch -->
+              <rect x="84" y="75" width="72" height="40" rx="4" fill="#1a2a1a" stroke="#2a6a3a" stroke-width="2"/>
+              <text x="120" y="90" text-anchor="middle" fill="#C9A84C" font-size="7.5" font-family="sans-serif" font-weight="600">MANAGED</text>
+              <text x="120" y="100" text-anchor="middle" fill="#C9A84C" font-size="7.5" font-family="sans-serif" font-weight="600">SWITCH</text>
+              <text x="120" y="110" text-anchor="middle" fill="#88cc88" font-size="6" font-family="monospace">IEC 61850</text>
+              <!-- Fibre lines -->
+              <line x1="84" y1="95" x2="40" y2="45" stroke="#44aaff" stroke-width="2" stroke-dasharray="5,3"/>
+              <line x1="84" y1="95" x2="40" y2="145" stroke="#44aaff" stroke-width="2" stroke-dasharray="5,3"/>
+              <line x1="156" y1="95" x2="200" y2="45" stroke="#44aaff" stroke-width="2" stroke-dasharray="5,3"/>
+              <line x1="156" y1="95" x2="200" y2="145" stroke="#44aaff" stroke-width="2" stroke-dasharray="5,3"/>
+              <line x1="120" y1="75" x2="120" y2="25" stroke="#44aaff" stroke-width="2" stroke-dasharray="5,3"/>
+              <!-- End nodes -->
+              <rect x="14" y="25" width="52" height="24" rx="3" fill="#1a1a2a" stroke="#3a3a6a" stroke-width="1"/>
+              <text x="40" y="36" text-anchor="middle" fill="#88aaff" font-size="6" font-family="monospace">IED 1</text>
+              <text x="40" y="45" text-anchor="middle" fill="#6688cc" font-size="5.5" font-family="monospace">Prot. Relay</text>
+              <rect x="14" y="125" width="52" height="24" rx="3" fill="#1a1a2a" stroke="#3a3a6a" stroke-width="1"/>
+              <text x="40" y="136" text-anchor="middle" fill="#88aaff" font-size="6" font-family="monospace">IED 2</text>
+              <text x="40" y="145" text-anchor="middle" fill="#6688cc" font-size="5.5" font-family="monospace">Bay Control</text>
+              <rect x="174" y="25" width="52" height="24" rx="3" fill="#1a2a1a" stroke="#3a6a3a" stroke-width="1"/>
+              <text x="200" y="36" text-anchor="middle" fill="#88ffaa" font-size="6" font-family="monospace">RTU</text>
+              <text x="200" y="45" text-anchor="middle" fill="#66cc88" font-size="5.5" font-family="monospace">SCADA link</text>
+              <rect x="174" y="125" width="52" height="24" rx="3" fill="#1a2a1a" stroke="#3a6a3a" stroke-width="1"/>
+              <text x="200" y="136" text-anchor="middle" fill="#88ffaa" font-size="6" font-family="monospace">MU</text>
+              <text x="200" y="145" text-anchor="middle" fill="#66cc88" font-size="5.5" font-family="monospace">Merging Unit</text>
+              <rect x="94" y="4" width="52" height="24" rx="3" fill="#2a1a1a" stroke="#6a3a3a" stroke-width="1"/>
+              <text x="120" y="15" text-anchor="middle" fill="#ffaaaa" font-size="6" font-family="monospace">FIREWALL</text>
+              <text x="120" y="24" text-anchor="middle" fill="#cc8888" font-size="5.5" font-family="monospace">Cybersecurity</text>
+              <!-- Label -->
+              <rect x="68" y="162" width="104" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="120" y="171" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">COMMUNICATION NETWORKS</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>Communication Networks for Energy</h4><p>Industrial-grade fibre optic systems, Ethernet switches, and cybersecurity hardware for energy operational technology (OT) environments.</p></div>
+        </div>
+
+        <!-- SCADA -->
+        <div class="p-card">
+          <div class="p-card-img" style="background:#0d1117;">
+            <svg viewBox="0 0 240 195" xmlns="http://www.w3.org/2000/svg" width="192" height="156">
+              <!-- Monitor -->
+              <rect x="20" y="10" width="200" height="130" rx="6" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+              <rect x="28" y="18" width="184" height="114" rx="4" fill="#0d1117"/>
+              <!-- Top toolbar -->
+              <rect x="28" y="18" width="184" height="18" rx="4" fill="#161b22"/>
+              <circle cx="38" cy="27" r="3.5" fill="#ff5f57"/>
+              <circle cx="48" cy="27" r="3.5" fill="#ffbd2e"/>
+              <circle cx="58" cy="27" r="3.5" fill="#28c840"/>
+              <text x="145" y="30" text-anchor="middle" fill="#8b949e" font-size="6.5" font-family="monospace">SCADA — Network Manager</text>
+              <!-- One-line diagram -->
+              <line x1="36" y1="50" x2="70" y2="50" stroke="#C9A84C" stroke-width="2"/>
+              <rect x="70" y="44" width="16" height="12" rx="2" fill="#2a3a2a" stroke="#4a6a4a" stroke-width="1"/>
+              <text x="78" y="54" text-anchor="middle" fill="#44cc44" font-size="5" font-family="monospace">CB</text>
+              <line x1="86" y1="50" x2="115" y2="50" stroke="#C9A84C" stroke-width="2"/>
+              <rect x="115" y="38" width="22" height="24" rx="3" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="1"/>
+              <text x="126" y="52" text-anchor="middle" fill="#4488ff" font-size="5" font-family="monospace">TX</text>
+              <line x1="137" y1="50" x2="162" y2="50" stroke="#C9A84C" stroke-width="2"/>
+              <line x1="78" y1="56" x2="78" y2="72" stroke="#888" stroke-width="1"/>
+              <rect x="64" y="72" width="28" height="14" rx="2" fill="#1a1a2a" stroke="#333" stroke-width="1"/>
+              <text x="78" y="82" text-anchor="middle" fill="#88aacc" font-size="5" font-family="monospace">LOAD MW</text>
+              <!-- Status panel right -->
+              <rect x="165" y="38" width="42" height="70" rx="3" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+              <text x="186" y="50" text-anchor="middle" fill="#8b949e" font-size="5.5" font-family="sans-serif">SYSTEM STATUS</text>
+              <text x="172" y="62" fill="#44ff44" font-size="5.5" font-family="monospace">●</text>
+              <text x="180" y="62" fill="#44ff44" font-size="5.5" font-family="monospace">BUS A OK</text>
+              <text x="172" y="72" fill="#44ff44" font-size="5.5" font-family="monospace">●</text>
+              <text x="180" y="72" fill="#44ff44" font-size="5.5" font-family="monospace">BUS B OK</text>
+              <text x="172" y="82" fill="#ffaa00" font-size="5.5" font-family="monospace">▲</text>
+              <text x="180" y="82" fill="#ffaa00" font-size="5.5" font-family="monospace">ALARM</text>
+              <text x="172" y="92" fill="#44ff44" font-size="5.5" font-family="monospace">●</text>
+              <text x="180" y="92" fill="#44ff44" font-size="5.5" font-family="monospace">COMM OK</text>
+              <!-- Chart area bottom -->
+              <rect x="32" y="98" width="128" height="28" rx="2" fill="#0a0a12"/>
+              <polyline points="35,120 48,112 61,116 74,105 87,108 100,100 113,104 126,98 139,102 152,96" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+              <polyline points="35,124 48,120 61,122 74,118 87,119 100,116 113,117 126,115 139,116 152,114" stroke="#4488ff" stroke-width="1" fill="none" stroke-opacity="0.7"/>
+              <text x="88" y="126" text-anchor="middle" fill="#444" font-size="5" font-family="monospace">MW LOAD TREND — REAL TIME</text>
+              <!-- Stand -->
+              <rect x="105" y="140" width="30" height="8" rx="2" fill="#30363d"/>
+              <rect x="88" y="148" width="64" height="5" rx="2" fill="#30363d"/>
+              <!-- Label -->
+              <rect x="64" y="160" width="112" height="12" rx="3" fill="#C9A84C" fill-opacity="0.2"/>
+              <text x="120" y="169" text-anchor="middle" fill="#E8C96A" font-size="7" font-family="sans-serif" font-weight="600">SCADA &amp; REMOTE MONITORING</text>
+            </svg>
+          </div>
+          <div class="p-card-body"><h4>SCADA &amp; Remote Monitoring</h4><p>Supervisory Control and Data Acquisition hardware and software for real-time monitoring and control of power networks and industrial facilities.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow rv">What We Do</div>
+    <h2 class="hl rv">Our <em>Services</em></h2>
+    <div class="gold-line rv"></div>
+    <div class="svc-layout">
+      <div class="svc-sticky rvl">
+        <div class="svc-img"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=85&fit=crop" alt="Engineering" onerror="this.style.display='none'"></div>
+        <div class="svc-tag"><strong>Full Lifecycle Support</strong><p>Design, supply, installation, commissioning, optimisation and ongoing maintenance — every stage of your energy infrastructure.</p></div>
+        <div class="svc-img2"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80&fit=crop" alt="Digital energy" onerror="this.style.display='none'"></div>
+      </div>
+      <div class="rvr">
+        <p class="lede" style="margin-bottom:1.8rem;">Integrated engineering, digital, and advisory services designed to maximise the performance, safety, and long-term value of energy and industrial infrastructure.</p>
+        <div class="acc">
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">01</span><span class="acc-t">Advanced Metering Infrastructure (AMI)</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Complete end-to-end AMI deployment enabling utilities to modernise metering estates and unlock data-driven operational intelligence.</p><ul><li>AMI network design &amp; planning</li><li>Smart meter installation &amp; commissioning</li><li>Communication network design</li><li>MDM system implementation</li><li>Billing system integration</li><li>Revenue assurance programmes</li><li>Prepaid metering rollout</li><li>Consumer data analytics</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">02</span><span class="acc-t">Electricity Infrastructure &amp; Power Systems</span><div class="acc-ico">+</div></div><div class="acc-body"><p>We design, supply, and support power systems that enhance network performance and protect critical assets.</p><ul><li>Transformer engineering &amp; supply</li><li>Substation design &amp; commissioning</li><li>HV/MV equipment installation</li><li>Protection system design &amp; testing</li><li>Power system studies</li><li>Infrastructure audit &amp; assessment</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">03</span><span class="acc-t">Power Quality &amp; Network Reliability</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Advanced diagnostic and monitoring services ensuring electrical stability and system integrity.</p><ul><li>Power quality surveys &amp; harmonic analysis</li><li>Voltage instability investigations</li><li>Power factor correction installation</li><li>Continuous monitoring &amp; reporting</li><li>Reliability improvement programmes</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">04</span><span class="acc-t">Substation Engineering &amp; High-Voltage</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Robust, future-ready substation solutions for performance, safety, scalability, and digital integration.</p><ul><li>Substation engineering design</li><li>HV equipment supply &amp; installation</li><li>Protection &amp; automation integration</li><li>Digital substation (IEC 61850)</li><li>Legacy substation modernisation</li><li>SCADA integration</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">05</span><span class="acc-t">Grid Modernisation &amp; Automation</span><div class="acc-ico">+</div></div><div class="acc-body"><p>We support utilities in transforming grid infrastructure toward intelligence, automation, and decentralisation.</p><ul><li>GMS/SCADA/EMS implementation</li><li>Automated fault detection (FDIR)</li><li>Load balancing &amp; optimisation</li><li>Smart grid architecture design</li><li>Outage management improvement</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">06</span><span class="acc-t">Renewable &amp; Hybrid Energy Systems</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Renewable and hybrid energy systems reducing fuel dependence while improving reliability and energy economics.</p><ul><li>Solar PV design &amp; deployment</li><li>BESS integration</li><li>Hybrid power solution design</li><li>Microgrid design &amp; deployment</li><li>Off-grid distributed energy systems</li><li>Renewable energy grid integration</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">07</span><span class="acc-t">Energy Optimisation &amp; Efficiency</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Analytical and engineering services helping organisations maximise energy performance and minimise waste.</p><ul><li>Comprehensive energy audits</li><li>Load behaviour &amp; demand analysis</li><li>Efficiency improvement strategies</li><li>Technical loss reduction</li><li>Energy benchmarking &amp; KPIs</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">08</span><span class="acc-t">Mining &amp; Industrial Technology</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Rugged technologies and support services designed for high-intensity mining and industrial environments.</p><ul><li>Mining electrical infrastructure</li><li>Equipment protection &amp; automation</li><li>Decarbonisation strategies</li><li>Emissions monitoring &amp; ESG reporting</li><li>Predictive maintenance services</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">09</span><span class="acc-t">Digital &amp; Intelligent Software Solutions</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Advanced platforms enhancing visibility, analytics, and decision support across energy and industrial operations.</p><ul><li>Energy monitoring platforms</li><li>Asset lifecycle management</li><li>Predictive maintenance solutions</li><li>MDM software implementation</li><li>Cybersecurity for OT environments</li><li>SCADA system integration</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">10</span><span class="acc-t">EV Charging &amp; Energy Control</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Intelligent EV charging and energy management supporting Africa's electric mobility ecosystem.</p><ul><li>EV charging infrastructure design</li><li>Smart charging management</li><li>Load management &amp; grid integration</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">11</span><span class="acc-t">Lifecycle Asset Services</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Full lifecycle support from initial assessment through to end-of-life replacement.</p><ul><li>Install &amp; commission services</li><li>Asset condition assessment</li><li>Preventive &amp; predictive maintenance</li><li>Upgrade, repair &amp; life extension</li><li>Spare parts management</li><li>Decommissioning &amp; disposal</li></ul></div></div>
+          <div class="acc-item"><div class="acc-h" onclick="toggleAcc(this)"><span class="acc-n">12</span><span class="acc-t">Training &amp; Capacity Building</span><div class="acc-ico">+</div></div><div class="acc-body"><p>Structured training programmes strengthening operational capability and technical competence.</p><ul><li>Operator &amp; technician training</li><li>Protection &amp; automation training</li><li>Smart metering &amp; AMI training</li><li>Energy management training</li><li>Safety &amp; compliance training</li><li>Customised on-site programmes</li></ul></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTORS ═══════════════ -->
+<section id="sectors">
+  <div class="wrap">
+    <div class="eyebrow rv">Who We Serve</div>
+    <h2 class="hl rv">Sectors <em>We Serve</em></h2>
+    <div class="gold-line rv"></div>
+    <div class="sec-row rv">
+      <div class="sec-card"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=80&fit=crop" alt="Utilities" onerror="this.style.display='none'"><div class="sec-ov"></div><div class="sec-lbl"><h4>Electricity Utilities</h4><p>Distribution companies &amp; grid operators</p></div></div>
+      <div class="sec-card"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=700&q=80&fit=crop" alt="Renewable" onerror="this.style.display='none'"><div class="sec-ov"></div><div class="sec-lbl"><h4>Renewable Energy</h4><p>IPPs &amp; clean energy developers</p></div></div>
+      <div class="sec-card"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80&fit=crop" alt="Mining" onerror="this.style.display='none'"><div class="sec-ov"></div><div class="sec-lbl"><h4>Mining &amp; Resources</h4><p>Extraction operations &amp; processing</p></div></div>
+      <div class="sec-card"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&q=80&fit=crop" alt="Industrial" onerror="this.style.display='none'"><div class="sec-ov"></div><div class="sec-lbl"><h4>Industrial &amp; Manufacturing</h4><p>Processing facilities &amp; factories</p></div></div>
+      <div class="sec-card"><img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=700&q=80&fit=crop" alt="Government" onerror="this.style.display='none'"><div class="sec-ov"></div><div class="sec-lbl"><h4>Government &amp; Public Sector</h4><p>Infrastructure &amp; public utilities</p></div></div>
+      <div class="sec-card"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=700&q=80&fit=crop" alt="Oil Gas" onerror="this.style.display='none'"><div class="sec-ov"></div><div class="sec-lbl"><h4>Oil &amp; Gas</h4><p>Upstream, midstream &amp; downstream</p></div></div>
+    </div>
+    <div class="sec-pills rv">
+      <div class="sec-pill">Commercial &amp; Large Enterprise</div>
+      <div class="sec-pill">Telecommunications Infrastructure</div>
+      <div class="sec-pill">Healthcare &amp; Critical Facilities</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact">
+  <div class="con-split">
+    <div class="con-L rvl">
+      <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?w=900&q=85&fit=crop" alt="Energy infrastructure" onerror="this.style.display='none'">
+      <div class="con-ov"></div>
+      <div class="con-info">
+        <h3>Let's Build Something Remarkable Together</h3>
+        <p>Whether you're a utility, mining operation, industrial facility, or infrastructure developer — Equinox CoreX Limited is ready to engage.</p>
+        <div class="c-det"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="c-txt"><strong>Email</strong>engage@equinoxcorex.com</div></div>
+        <div class="c-det"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72 19.79 19.79 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 19.79 19.79 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div class="c-txt"><strong>Phone</strong>+233 54 878 0970</div></div>
+        <div class="c-det"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="c-txt"><strong>Location</strong>Accra, Ghana</div></div>
+      </div>
+    </div>
+    <div class="con-R rvr">
+      <div class="eyebrow">Reach Us</div>
+      <div class="conv-head">
+        <h2 class="conv-title">Get in Touch</h2>
+        <div class="conv-sub">— Initiate a Convergence —</div>
+      </div>
+      <form class="frm" onsubmit="return false;">
+        <div class="frm-row">
+          <input type="text" placeholder="Full Name">
+          <input type="text" placeholder="Company / Organisation">
+        </div>
+        <div class="frm-row">
+          <input type="email" placeholder="Email Address">
+          <input type="tel" placeholder="Phone Number">
+        </div>
+        <input type="text" placeholder="Country / Region">
+        <span class="svc-lbl-txt">Areas of Interest — select all that apply</span>
+        <div class="svc-cks">
+          <label class="svc-ck"><input type="checkbox"><span>Smart Metering &amp; AMI</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Electricity Infrastructure</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Power Quality &amp; Reliability</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Substation Engineering</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Grid Modernisation</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Renewable &amp; Hybrid Energy</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Energy Optimisation</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Mining &amp; Industrial</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Digital &amp; Software</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>EV Charging Systems</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Lifecycle Asset Services</span></label>
+          <label class="svc-ck"><input type="checkbox"><span>Training &amp; Capacity Building</span></label>
+        </div>
+        <textarea placeholder="Tell us about your project or requirement..."></textarea>
+        <button type="submit" class="frm-btn">Initiate Convergence &#8594;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a href="#hero" class="logo-svg">
+          <svg class="logo-mark" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#C9A84C" stroke-width="1.2"/><circle cx="18" cy="18" r="8" stroke="#C9A84C" stroke-width="1"/><line x1="18" y1="1" x2="18" y2="9" stroke="#C9A84C" stroke-width="1.2"/><line x1="18" y1="27" x2="18" y2="35" stroke="#C9A84C" stroke-width="1.2"/><line x1="1" y1="18" x2="9" y2="18" stroke="#C9A84C" stroke-width="1.2"/><line x1="27" y1="18" x2="35" y2="18" stroke="#C9A84C" stroke-width="1.2"/><line x1="5.5" y1="5.5" x2="11.5" y2="11.5" stroke="#C9A84C" stroke-width=".8"/><line x1="24.5" y1="24.5" x2="30.5" y2="30.5" stroke="#C9A84C" stroke-width=".8"/><line x1="30.5" y1="5.5" x2="24.5" y2="11.5" stroke="#C9A84C" stroke-width=".8"/><line x1="5.5" y1="30.5" x2="11.5" y2="24.5" stroke="#C9A84C" stroke-width=".8"/><circle cx="18" cy="18" r="2.5" fill="#C9A84C"/><path d="M8 10 A12 12 0 0 1 18 6" stroke="#2E5228" stroke-width="2" stroke-linecap="round"/><path d="M28 26 A12 12 0 0 1 18 30" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="logo-text"><span class="logo-top">Equinox CoreX</span><span class="logo-bot">Energy &amp; Technology</span></div>
+        </a>
+        <p>A Ghanaian-owned engineering, energy, and technology solutions company delivering advanced infrastructure and intelligent digital platforms across Africa.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Products</h5>
+        <ul><li><a href="#products">Smart Metering &amp; AMI</a></li><li><a href="#products">Electrical &amp; Power</a></li><li><a href="#products">Energy Storage</a></li><li><a href="#products">Protection &amp; Automation</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h5>Services</h5>
+        <ul><li><a href="#services">AMI Services</a></li><li><a href="#services">Power Systems</a></li><li><a href="#services">Renewable Energy</a></li><li><a href="#services">Grid Modernisation</a></li><li><a href="#services">Digital Solutions</a></li></ul>
+      </div>
+      <div class="ft-col">
+        <h5>Company</h5>
+        <ul><li><a href="#about">About Us</a></li><li><a href="#vm">Vision &amp; Mission</a></li><li><a href="#sectors">Sectors</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p class="ft-copy">&copy; 2025 Equinox CoreX Limited. All Rights Reserved. | Accra, Ghana</p>
+      <div class="ft-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('on',window.scrollY>40);
+});
+function toggleNav(){document.getElementById('nl').classList.toggle('open');}
+function showTab(id,btn){
+  document.querySelectorAll('.prod-panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.p-tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById('pp-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+function toggleAcc(h){
+  const it=h.parentElement,was=it.classList.contains('open');
+  document.querySelectorAll('.acc-item.open').forEach(i=>i.classList.remove('open'));
+  if(!was)it.classList.add('open');
+}
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.08});
+document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>io.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
