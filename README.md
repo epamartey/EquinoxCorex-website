@@ -1,0 +1,2 @@
+# EquinoxCorex-website
+My website
